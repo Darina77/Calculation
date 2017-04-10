@@ -1,0 +1,189 @@
+@bodycolor: #cfced3;
+@upBlockColor: #3e3c4a;
+@elementsColor: #f76e5d; 
+@minWidth: 1000px;
+@textColor: #d2c3c3;
+@lowerBlockColor: #e0dfe5;
+@textInfoColor: #d2c3c3;
+@font-face {
+    font-family: MyriadPro-Bold; /* Имя шрифта */
+    src: url('../fonts/MyriadPro-Bold.otf'); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: MyriadPro-Regular; /* Имя шрифта */
+    src: url('../fonts/MyriadPro-Regular.otf'); /* Путь к файлу со шрифтом */
+}
+body, html
+{
+  background-color: @bodycolor;
+  min-width: @minWidth;
+  font-family:  MyriadPro-Regular;
+}
+#upBlock
+{
+     position: relative;
+     box-sizing: border-box;
+     height: 480px;
+     background-color: @upBlockColor;
+     color: @textColor;
+     padding-top: 220px;
+     text-align: center;
+     font-family: MyriadPro-Bold;
+     h1
+     {
+       
+        position: relative;
+        z-index: 800;
+        font-weight: bold;
+        color: @textColor;
+        margin-bottom: 25px;
+       font-family: MyriadPro-Bold;
+     }
+    button
+    {
+        position: relative;
+        width: 250px;
+        height: 70px;
+        border: none;
+        margin: auto;
+        margin-top: 20px;
+        font-size: 30px;
+        color: @textColor;
+        background-color: @elementsColor;
+        font-weight: bold;
+      
+    }
+    button:hover
+    {
+       background-color: #e5695a; 
+    }
+}
+
+.myHoverButton::hover
+{
+    
+}
+#imageBlock
+{
+     position: absolute;
+     height: 80%;;
+     top: 20%;
+     width: 70%;
+     left: 15%;
+     opacity: 0.7; 
+     background-image: url('../img/cakes.jpg');
+     background-repeat: no-repeat;
+     background-size: 100%;
+     background-position: 0px 100%;
+    
+}
+#lineDiv
+{
+    background-color: @elementsColor;
+    height: 68px;
+    width: 70%;
+    margin: auto;
+}
+#divCalcText
+{
+    margin-top: 6px;
+    position: relative;
+    margin: auto;
+    background-color: rgba(184, 153, 158, 0.64);
+    color: @upBlockColor;
+    padding: 10px;
+    z-index: 800;
+    font-size: 23px;
+    width: 500px;
+    font-family: MyriadPro-Regular;
+}
+#content
+{
+    position: relative;
+    box-sizing: border-box;
+    background-color: @lowerBlockColor;
+    width: 70%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    h2 {
+        font-weight: bold;
+        color: @upBlockColor;
+        font-family: MyriadPro-Bold;
+    }
+   
+}
+#grid 
+{
+   position: relative;
+   margin: 20px;
+   padding-left: 40px;
+   padding-right: 40px;
+
+   margin-top: 60px;
+   text-align: left;
+   font-size: 16px;
+    .squar
+    {
+        float: left;
+        width: 40px;
+        height: 40px;
+        background-color: @elementsColor;
+        margin-left:auto;
+    }
+    .textNear {
+        color: @elementsColor;
+        margin-top: -2px;
+        margin-left: 50px;
+        font-family: MyriadPro-Bold;
+    }
+    
+}
+#lowerLineDiv
+{
+    position: relative;
+    height: 45px;
+    width: 60%;
+    margin: auto;
+    background-color:  @elementsColor;
+    font-size: 14px;
+    font-family: MyriadPro-Regular;
+    padding-top: 12px;
+    
+}
+footer 
+{
+    padding-bottom: 18px;
+    div
+    {
+        text-align: center;
+        color: @textColor;
+        font-size: 15px;
+        padding-top: 8px;
+    }  
+}
+.textOnly
+{
+    color: @upBlockColor;
+  
+}
+.glyphicon
+{
+    margin-top: 7px;
+    font-size: 25px;
+    color: @textColor;
+    text-align: center;
+    display: block;
+}
+.textNearGray
+{
+    color: #6a6868;
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-bottom: 25px;
+    font-size: 14px;
+    font-family: MyriadPro-Regular;
+}
