@@ -5,6 +5,9 @@
 @textColor: #d2c3c3;
 @lowerBlockColor: #e0dfe5;
 @textInfoColor: #d2c3c3;
+@lengthBlock: 70%;
+@marginBlock: (100%- @lengthBlock)/2;
+@headerHeight: 480px;
 @font-face {
     font-family: MyriadPro-Bold; /* Имя шрифта */
     src: url('../fonts/MyriadPro-Bold.otf'); /* Путь к файлу со шрифтом */
@@ -23,7 +26,7 @@ body, html
 {
      position: relative;
      box-sizing: border-box;
-     height: 480px;
+     height: @headerHeight;
      background-color: @upBlockColor;
      color: @textColor;
      padding-top: 220px;
@@ -37,39 +40,32 @@ body, html
         font-weight: bold;
         color: @textColor;
         margin-bottom: 25px;
-       font-family: MyriadPro-Bold;
+        font-family: MyriadPro-Bold;
      }
-    button
+    .orange-white-title 
     {
-        position: relative;
-        width: 250px;
-        height: 70px;
-        border: none;
-        margin: auto;
-        margin-top: 20px;
-        font-size: 30px;
-        color: @textColor;
+        position: absolute;
+        width: @lengthBlock;
         background-color: @elementsColor;
-        font-weight: bold;
-      
-    }
-    button:hover
-    {
-       background-color: #e5695a; 
+        left: @marginBlock;
+        top: 20%;
+        height: 50px;
+        padding: auto;
+        h1 
+        {
+            margin-top: 5px;
+            font-family: MyriadPro-Bold;
+        }
     }
 }
 
-.myHoverButton::hover
-{
-    
-}
 #imageBlock
 {
      position: absolute;
-     height: 80%;;
+     height: 80%;
      top: 20%;
-     width: 70%;
-     left: 15%;
+     width: @lengthBlock;
+     left: @marginBlock;
      opacity: 0.7; 
      background-image: url('../img/cakes.jpg');
      background-repeat: no-repeat;
@@ -114,6 +110,11 @@ body, html
         color: @upBlockColor;
         font-family: MyriadPro-Bold;
     }
+    .underTitle
+    {
+        color: @elementsColor;
+        font-family: MyriadPro-Regular;
+    }
    
 }
 #grid 
@@ -134,7 +135,8 @@ body, html
         background-color: @elementsColor;
         margin-left:auto;
     }
-    .textNear {
+    .textNear
+    {
         color: @elementsColor;
         margin-top: -2px;
         margin-left: 50px;
@@ -168,7 +170,6 @@ footer
 .textOnly
 {
     color: @upBlockColor;
-  
 }
 .glyphicon
 {
@@ -186,4 +187,77 @@ footer
     margin-bottom: 25px;
     font-size: 14px;
     font-family: MyriadPro-Regular;
+}
+.newPositionedContent 
+{
+    margin-top: -@headerHeight*0.8+50px;
+    hr 
+    {
+       border-color: #b5b5b5;
+       width: 70%;
+    }
+}
+#grid-dish
+{ 
+     position: relative; 
+     margin-top: 35px;
+     padding-left: 40px;
+     padding-right: 40px;
+     .dish
+     {
+      
+       margin-bottom: 10px;
+       padding: 0;
+       box-sizing: border-box;
+     }
+     img
+     {
+       width: 100%;   
+     }
+    
+     .darkDish
+    {
+        position: absolute;
+        top: 0;
+        background-color:  rgba(247, 110, 93, 0.6);
+        width: 100%;
+        height: 100%;
+        display: none;
+        text-align: center;
+        color: @textColor;
+        font-size: 30px;
+        font-family: MyriadPro-Bold;
+        padding-top: 66px;
+    }
+    .space 
+    {
+        position:relative;
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+     
+}
+button
+{
+    position: relative;
+    width: 250px;
+    height: 70px;
+    border: none;
+    margin: auto;
+    margin-top: 24px;
+    font-size: 30px;
+    color: @textColor;
+    background-color: @elementsColor;
+    font-weight: bold;
+      
+}
+button:hover
+{
+    background-color: #e5695a; 
+}
+#addDish
+{
+    width: 400px;
+    padding-bottom: 6px;
+    margin-bottom: 60px;
 }
