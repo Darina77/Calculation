@@ -5,7 +5,8 @@ $(document).ready(function(){
 
     //Коли завантажується page.html одразу вставляю productClassification.html,
     //it's ajax: https://www.w3schools.com/jquery/jquery_ajax_load.asp
-    $("#content").load('/html/productClassification.html', function(){   
+    //changed!
+    $("#content").load('../html/productClassification.html', function(){   
     
     fillDishGrid();
     function fillDishGrid(){
@@ -30,8 +31,18 @@ $(document).ready(function(){
     $(".dish").mouseenter(function() {
        $(this).find(".darkDish").show();
        var id = $(this).attr('id');
-       $(this).find(".darkDish").find("div").text(dishClass [id]);
+       var text = dishClass [id];
+       var node =  $(this).find(".darkDish");
+       node.find("div").text(text);
         
+        if (text.length < 20)
+        {
+          node.find("div").css("margin-top", node.height()*0.3);
+        }
+        else if (text.length < 36)
+        {
+         node.find("div").css("margin-top", node.height()*0.2);  
+        }
     }); 
     
     $(".dish").mouseleave(function() {
@@ -46,7 +57,7 @@ $(document).ready(function(){
         $("#content").empty();
         // Тут завантажиться форма для створення своєї страви, а саме  //productForm.html
         // завантажиться в id="#content"
-         $("#content").load('/html/productForm.html', function(){ 
+         $("#content").load('../html/productForm.html', function(){ 
              
          });
     });

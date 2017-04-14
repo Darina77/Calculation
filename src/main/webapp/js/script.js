@@ -9,7 +9,7 @@ $(document).ready(function(){
          e.preventDefault();
         // var url ="html/page.html";
         // $(location).attr('href', url);
-        $('body').load("/html/page.html");
+        $('body').load("html/page.html");
        
         });
  
