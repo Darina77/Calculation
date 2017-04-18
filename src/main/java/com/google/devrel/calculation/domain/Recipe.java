@@ -1,6 +1,9 @@
 package com.google.devrel.calculation.domain;
 
+import com.google.devrel.calculation.form.ProductForm;
+
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.NoSuchElementException;
 
@@ -12,18 +15,17 @@ import java.util.NoSuchElementException;
 public class Recipe
 {
     private String name;
-    private int recipeId;
     private Map<Product, Double> ingredients; // продукти та іх необхідна норма (вага в кг)
-    private double standartPortionSize;
+    private double standardPortionSize;
 
     /**
      * Конструктор рецептів
      * @param name назва рецепта
      */
-    public Recipe(String name, double standartPortionSize)
+    public Recipe(String name, double standardPortionSize)
     {
         this.name = name;
-        this.standartPortionSize = standartPortionSize;
+        this.standardPortionSize = standardPortionSize;
         ingredients = new HashMap<>();
     }
 
@@ -39,10 +41,10 @@ public class Recipe
     }
 
     private double countNorm(Product product){
-        double norm = 0;
+        double norm ;
         double weight = productWeight(product);
 
-        if (standartPortionSize == 1000) {
+        if (standardPortionSize == 1000) {
             norm = weight;
         } else {
            norm = (weight * 100)/ 1000;
@@ -104,9 +106,23 @@ public class Recipe
         return name;
     }
 
-    public int getRecipeId()
-    {
-        return recipeId;
+    public double getStandardPortionSize() {return standardPortionSize;}
+
+
+    public double countSumOfAll() {
+        double sum = 0;
+        for(Product product: ingredients.keySet())
+        {
+            sum += product.sum(ingredients.get(product));
+        }
+        return sum;
     }
 
+    public void update(double standardPortionSize, List<ProductForm> productForms) {
+        //todo якщо є якісь розбіхності з обьектом змінити іх на передані параметри
+    }
+
+    public void add(List<ProductForm> productForms) {
+        //todo додати всі продукти з форми
+    }
 }

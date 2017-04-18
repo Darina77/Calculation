@@ -56,4 +56,5 @@ public class Product
 
     public double getBruttoWeight() {return bruttoWeight;}
     public double getNettoWeight() {return nettoWeight;}
+
 }
