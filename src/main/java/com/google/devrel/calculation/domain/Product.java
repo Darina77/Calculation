@@ -8,7 +8,7 @@ public class Product
 {
     private int productID;
     private String name;
-    private int price; //ціна в копійках за один кг
+    private int price; //ціна в копійках за один кг або за одну штуку
 
 
     /**
