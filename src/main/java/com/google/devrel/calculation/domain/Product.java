@@ -6,27 +6,24 @@ package com.google.devrel.calculation.domain;
  */
 public class Product
 {
-    private int productID;
     private String name;
     private int price; //ціна в копійках за один кг або за одну штуку
+    private double bruttoWeight;
+    private double nettoWeight;
 
 
     /**
-     * @param productID унікальний id продукта
      * @param name назва продукта
      * @param price закупівельна ціна за кілограм
      */
-    public Product(int productID, String name, int price)
+    public Product(String name, double bruttoWeight, double nettoWeight, int price)
     {
-        this.productID = productID;
         this.name = name;
+        this.bruttoWeight = bruttoWeight;
+        this.nettoWeight = nettoWeight;
         this.price = price;
     }
 
-    /**
-     * @return  унікальний номер продукту
-     */
-    public int getProductID(){ return productID; }
 
     /**
      * @return  назву продукту
@@ -48,7 +45,7 @@ public class Product
      * @param that інтший продукт
      * @return результат порівняння (рівні або ні)
      */
-    public boolean equals(Product that){ return productID == that.productID; }
+    public boolean equals(Product that){ return name.equals(that.getName()); }
 
     /**
      * Обраховує ціну якоїсь маси продукту
@@ -56,4 +53,7 @@ public class Product
      * @return сумму, ціну за якусь норму продукту
      */
     public double sum(double norm){ return price*norm;}
+
+    public double getBruttoWeight() {return bruttoWeight;}
+    public double getNettoWeight() {return nettoWeight;}
 }
