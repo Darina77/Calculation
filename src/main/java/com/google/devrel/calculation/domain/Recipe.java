@@ -15,6 +15,7 @@ public class Recipe
     private int recipeId;
     private Map<Product, Double> ingredients; // продукти та іх необхідна норма (вага в кг)
 
+
     /**
      * Конструктор рецептів
      * @param recipeId id рецепта

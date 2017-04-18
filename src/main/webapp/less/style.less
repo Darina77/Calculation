@@ -6,6 +6,8 @@
 @lowerBlockColor: #e0dfe5;
 @textInfoColor: #d2c3c3;
 @lengthBlock: 70%;
+@minLengthBlock: 100%;
+@minLengthFooter: 80%;
 @marginBlock: (100%- @lengthBlock)/2;
 @headerHeight: 480px;
 @font-face {
@@ -77,8 +79,9 @@ body, html
 {
     background-color: @elementsColor;
     height: 68px;
-    width: 70%;
+    width: 100%;
     margin: auto;
+    margin-top: -20px;
 }
 #divCalcText
 {
@@ -205,7 +208,7 @@ footer
      padding-right: 40px;
      .dish
      {
-      
+       
        margin-bottom: 10px;
        padding: 0;
        box-sizing: border-box;
@@ -218,16 +221,24 @@ footer
      .darkDish
     {
         position: absolute;
+       //position: relative;
         top: 0;
         background-color:  rgba(247, 110, 93, 0.6);
         width: 100%;
         height: 100%;
         display: none;
-        text-align: center;
-        color: @textColor;
-        font-size: 30px;
-        font-family: MyriadPro-Bold;
-        padding-top: 66px;
+        padding: 5% 0;
+
+         div
+        {
+          
+          color: @textColor;
+          font-size: 26px;
+          font-family: MyriadPro-Bold;
+          margin-left: 15px;
+          margin-right: 15px;
+        }
+        
     }
     .space 
     {
@@ -260,4 +271,57 @@ button:hover
     width: 400px;
     padding-bottom: 6px;
     margin-bottom: 60px;
+}
+
+@media(max-width: 991px)
+{
+    #imageBlock
+    {
+       width: @minLengthBlock; 
+       top: 48px;
+       left:0;
+    }
+    .infoHeader
+    {
+       margin-top: -40px
+    }
+    #content 
+    {
+        width: @minLengthBlock;
+    }
+     #upBlock {
+       .orange-white-title 
+      {
+       width: 100%;
+       left: 0;
+      }
+    }
+    #lowerLineDiv
+    {
+         width: @minLengthFooter;
+         top: 0;
+    }
+    #grid-dish
+    {
+      .darkDish
+      {
+        div 
+        {
+          font-size: 40px;
+        }
+      }
+    }
+}
+@media(max-width: 767px)
+{
+    #grid-dish
+    {
+      .darkDish
+      {
+        div 
+        {
+          font-size: 80px;
+        }
+      }
+    }
 }
