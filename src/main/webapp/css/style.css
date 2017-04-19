@@ -1,0 +1,309 @@
+@font-face {
+  font-family: MyriadPro-Bold;
+  src: url('../fonts/MyriadPro-Bold.otf')
+  
+  /* Имя шрифта */
+  /* Путь к файлу со шрифтом */
+}
+@font-face {
+  font-family: MyriadPro-Regular;
+  src: url('../fonts/MyriadPro-Regular.otf')
+  
+  /* Имя шрифта */
+  /* Путь к файлу со шрифтом */
+}
+body,
+html {
+  background-color: #cfced3;
+  min-width: 1000px;
+  font-family: MyriadPro-Regular;
+}
+#upBlock {
+  position: relative;
+  box-sizing: border-box;
+  height: 480px;
+  background-color: #3e3c4a;
+  color: #d2c3c3;
+  padding-top: 220px;
+  text-align: center;
+  font-family: MyriadPro-Bold;
+}
+#upBlock h1 {
+  position: relative;
+  z-index: 800;
+  font-weight: bold;
+  color: #d2c3c3;
+  margin-bottom: 25px;
+  font-family: MyriadPro-Bold;
+}
+#upBlock .orange-white-title {
+  position: absolute;
+  width: 70%;
+  background-color: #f76e5d;
+  left: 15%;
+  top: 20%;
+  height: 50px;
+  padding: auto;
+}
+#upBlock .orange-white-title h1 {
+  margin-top: 5px;
+  font-family: MyriadPro-Bold;
+}
+#imageBlock {
+  position: absolute;
+  height: 80%;
+  top: 20%;
+  width: 70%;
+  left: 15%;
+  opacity: 0.7;
+  background-image: url('../img/cakes.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 0px 100%;
+}
+#lineDiv {
+  background-color: #f76e5d;
+  height: 68px;
+  width: 100%;
+  margin: auto;
+  margin-top: -20px;
+}
+#divCalcText {
+  margin-top: 6px;
+  position: relative;
+  margin: auto;
+  background-color: rgba(184, 153, 158, 0.64);
+  color: #3e3c4a;
+  padding: 10px;
+  z-index: 800;
+  font-size: 23px;
+  width: 500px;
+  font-family: MyriadPro-Regular;
+}
+#content {
+  position: relative;
+  box-sizing: border-box;
+  background-color: #e0dfe5;
+  width: 70%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#content h2 {
+  font-weight: bold;
+  color: #3e3c4a;
+  font-family: MyriadPro-Bold;
+}
+#content .underTitle {
+  color: #f76e5d;
+  font-family: MyriadPro-Regular;
+}
+#grid {
+  position: relative;
+  margin: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-top: 60px;
+  text-align: left;
+  font-size: 16px;
+}
+#grid .squar {
+  float: left;
+  width: 40px;
+  height: 40px;
+  background-color: #f76e5d;
+  margin-left: auto;
+}
+#grid .textNear {
+  color: #f76e5d;
+  margin-top: -2px;
+  margin-left: 50px;
+  font-family: MyriadPro-Bold;
+}
+#lowerLineDiv {
+  position: relative;
+  height: 45px;
+  width: 60%;
+  margin: auto;
+  background-color: #f76e5d;
+  font-size: 14px;
+  font-family: MyriadPro-Regular;
+  padding-top: 12px;
+}
+footer {
+  padding-bottom: 18px;
+}
+footer div {
+  text-align: center;
+  color: #d2c3c3;
+  font-size: 15px;
+  padding-top: 8px;
+}
+.textOnly {
+  color: #3e3c4a;
+}
+.glyphicon {
+  margin-top: 7px;
+  font-size: 25px;
+  color: #d2c3c3;
+  text-align: center;
+  display: block;
+}
+.textNearGray {
+  color: #6a6868;
+  margin-top: 10px;
+  margin-left: 50px;
+  margin-bottom: 25px;
+  font-size: 14px;
+  font-family: MyriadPro-Regular;
+}
+.newPositionedContent {
+  margin-top: -334px;
+}
+.newPositionedContent hr {
+  border-color: #b5b5b5;
+  width: 70%;
+}
+#grid-dish {
+  position: relative;
+  margin-top: 35px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+#grid-dish .dish {
+  margin-bottom: 10px;
+  padding: 0;
+  box-sizing: border-box;
+}
+#grid-dish img {
+  width: 100%;
+}
+#grid-dish .darkDish {
+  position: absolute;
+  top: 0;
+  background-color: rgba(247, 110, 93, 0.6);
+  width: 100%;
+  height: 100%;
+  display: none;
+  padding: 5% 0;
+}
+#grid-dish .darkDish div {
+  color: #d2c3c3;
+  font-size: 26px;
+  font-family: MyriadPro-Bold;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+#grid-dish .space {
+  position: relative;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+button {
+  position: relative;
+  width: 250px;
+  height: 70px;
+  border: none;
+  margin: auto;
+  margin-top: 24px;
+  font-size: 30px;
+  color: #d2c3c3;
+  background-color: #f76e5d;
+  font-weight: bold;
+}
+button:hover {
+  background-color: #e5695a;
+}
+#addDish {
+  width: 400px;
+  padding-bottom: 6px;
+  margin-bottom: 60px;
+}
+@media (max-width: 991px) {
+  #imageBlock {
+    width: 100%;
+    top: 48px;
+    left: 0;
+  }
+  .infoHeader {
+    margin-top: -40px;
+  }
+  #content {
+    width: 100%;
+  }
+  #upBlock .orange-white-title {
+    width: 100%;
+    left: 0;
+  }
+  #lowerLineDiv {
+    width: 80%;
+    top: 0;
+  }
+  #grid-dish .darkDish div {
+    font-size: 40px;
+  }
+}
+@media (max-width: 767px) {
+  #grid-dish .darkDish div {
+    font-size: 80px;
+  }
+}
+.FormSpace {
+  margin-right: 100px;
+}
+.OptionSpace {
+  margin-right: 137px;
+}
+.text {
+  width: 350px;
+}
+.form {
+  font-size: 25px;
+}
+.table {
+  width: 700px;
+  margin-left: 145px;
+  background-color: #f76e5d;
+}
+.Category {
+  width: 350px;
+}
+.ChoosenIngr {
+  width: 700px;
+  margin-left: 145px;
+  background-color: darkgrey;
+}
+.TextNameIngr {
+  background-color: darkgrey;
+}
+.TextMassIngr {
+  background-color: darkgrey;
+}
+.TextPrizeIngr {
+  width: 100%;
+  background-color: darkgrey;
+}
+.NameOfIngr {
+  width: 700px;
+  margin-left: 45px;
+}
+#button {
+  width: 233px;
+}
+.Back {
+  margin-left: 35px;
+  background-color: grey;
+}
+.Ad {
+  margin-left: 225px;
+}
+.ListOfIngr {
+  width: 945px;
+}
+#Ingridian {
+  width: 700px;
+  margin-left: 50px;
+}
