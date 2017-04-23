@@ -251,6 +251,110 @@ button:hover {
     font-size: 80px;
   }
 }
-.blueButton {
-  background-color: blue;
+.FormSpace {
+  margin-right: 100px;
+}
+.OptionSpace {
+  margin-right: 137px;
+}
+.text {
+  width: 350px;
+}
+.form {
+  font-size: 25px;
+}
+.table {
+  width: 700px;
+  margin-left: 145px;
+  background-color: #f76e5d;
+}
+.Category {
+  width: 350px;
+}
+.ChoosenIngr {
+  width: 700px;
+  margin-left: 145px;
+  background-color: darkgrey;
+}
+.TextNameIngr {
+  background-color: darkgrey;
+}
+.TextMassIngr {
+  background-color: darkgrey;
+}
+.TextPrizeIngr {
+  width: 100%;
+  background-color: darkgrey;
+}
+.NameOfIngr {
+  width: 700px;
+  margin-left: 45px;
+}
+#button {
+  width: 233px;
+}
+.Back {
+  margin-left: 35px;
+  background-color: grey;
+}
+.Ad {
+  margin-left: 225px;
+}
+.ListOfIngr {
+  width: 945px;
+}
+#Ingridian {
+  width: 700px;
+  margin-left: 50px;
+}
+.formProceed {
+  position: relative;
+  width: 70%;
+  margin: auto;
+  color: #3e3c4a;
+  padding-bottom: 80px;
+  padding-top: 20px;
+}
+.formProceed div {
+  text-align: left;
+}
+.formProceed .formTitle {
+  color: #f76e5d;
+  font-family: MyriadPro-Bold;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.formProceed .myInput {
+  position: relative;
+  border: 2px solid #f76e5d;
+  text-align: center;
+  background-color: #e0dfe5;
+  width: 80%;
+}
+.formProceed .myInput:focus {
+  outline: none;
+}
+.formProceed .Back {
+  height: 50px;
+  width: 60%;
+  margin: 0;
+}
+.formProceed .Back:hover {
+  background-color: #717171;
+}
+.formProceed .send {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border: none;
+  font-size: 30px;
+  color: #d2c3c3;
+  background-color: #f76e5d;
+  font-weight: bold;
+}
+.formProceed .send:hover {
+  background-color: #e5695a;
+}
+.formProceed .formRow {
+  margin-bottom: 50px;
 }
