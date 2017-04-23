@@ -16,7 +16,6 @@ body,
 html {
   background-color: #cfced3;
   min-width: 1000px;
-  font-family: MyriadPro-Regular;
 }
 #upBlock {
   position: relative;
@@ -24,9 +23,8 @@ html {
   height: 480px;
   background-color: #3e3c4a;
   color: #d2c3c3;
-  padding-top: 220px;
+  padding-top: 210px;
   text-align: center;
-  font-family: MyriadPro-Bold;
 }
 #upBlock h1 {
   position: relative;
@@ -99,7 +97,6 @@ html {
 }
 #content .underTitle {
   color: #f76e5d;
-  font-family: MyriadPro-Regular;
 }
 #grid {
   position: relative;
@@ -130,7 +127,6 @@ html {
   margin: auto;
   background-color: #f76e5d;
   font-size: 14px;
-  font-family: MyriadPro-Regular;
   padding-top: 12px;
 }
 footer {
@@ -158,7 +154,6 @@ footer div {
   margin-left: 50px;
   margin-bottom: 25px;
   font-size: 14px;
-  font-family: MyriadPro-Regular;
 }
 .newPositionedContent {
   margin-top: -334px;
@@ -213,6 +208,7 @@ button {
   color: #d2c3c3;
   background-color: #f76e5d;
   font-weight: bold;
+  margin-bottom: 50px;
 }
 button:hover {
   background-color: #e5695a;
@@ -255,7 +251,7 @@ button:hover {
   margin-right: 100px;
 }
 .OptionSpace {
-  margin-right: 137px;
+  margin-right: 140px;
 }
 .text {
   width: 350px;
@@ -265,15 +261,22 @@ button:hover {
 }
 .table {
   width: 700px;
-  margin-left: 145px;
   background-color: #f76e5d;
+  margin: auto;
 }
 .Category {
   width: 350px;
+  text-align: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  overflow: hidden;
+}
+.option {
+  text-align: center;
 }
 .ChoosenIngr {
   width: 700px;
-  margin-left: 145px;
+  margin: auto;
   background-color: darkgrey;
 }
 .TextNameIngr {
@@ -283,25 +286,34 @@ button:hover {
   background-color: darkgrey;
 }
 .TextPrizeIngr {
-  width: 100%;
+  width: 101%;
   background-color: darkgrey;
 }
 .NameOfIngr {
   width: 700px;
-  margin-left: 45px;
+  margin: auto;
 }
 #button {
-  width: 233px;
+  width: 214px;
+  height: 80px;
+  margin: 10px;
+}
+.AdIngridians {
+  color: white;
+  margin-top: 20%;
 }
 .Back {
-  margin-left: 35px;
   background-color: grey;
+  color: white;
 }
 .Ad {
-  margin-left: 225px;
+  color: white;
+  margin-bottom: 10%;
 }
-.ListOfIngr {
-  width: 945px;
+p {
+  font-family: monospace, sans-serif;
+  color: dimgrey;
+  font-weight: 600;
 }
 #Ingridian {
   width: 700px;
@@ -357,4 +369,70 @@ button:hover {
 }
 .formProceed .formRow {
   margin-bottom: 50px;
+}
+.formProceed td {
+  color: white;
+}
+.table-shadow {
+  width: 86%;
+  box-shadow: 6px 6px 1px 3px #b9babe;
+  margin: auto;
+  background-color: #efe4dd;
+  padding: 8px;
+  padding-bottom: 12px;
+  padding-top: 12px;
+}
+#resultTable {
+  width: 100%;
+  margin: auto;
+  color: #453328;
+}
+#resultTable caption,
+#resultTable th {
+  background-color: #efe4dd;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #453328;
+}
+#resultTable .tableHead th {
+  font-size: 28px;
+  padding-bottom: 24px;
+}
+#resultTable .tableIng {
+  font-size: 25px;
+  font-weight: normal;
+  color: #453328;
+}
+#resultTable td {
+  color: #f76e5d;
+  padding-bottom: 10px;
+  font-size: 26px;
+  font-weight: bold;
+}
+#resultTable td hr {
+  color: #b5b5b5;
+  background-color: #b5b5b5;
+  border: none;
+  width: 70%;
+  height: 2px;
+}
+#resultTable #finalSum {
+  font-size: 30px;
+  color: #453328;
+  text-align: right;
+  padding-right: 23px;
+}
+#resultTable .exit {
+  text-align: left;
+  padding-right: 23px;
+  padding-left: 34px;
+}
+#printButton {
+  font-size: 24px;
+  background-color: #65584f;
+  margin-bottom: 28px;
+}
+#printButton:hover {
+  background-color: #5c5048;
 }

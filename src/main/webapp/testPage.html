@@ -24,71 +24,60 @@
          <h2 class="underTitle">Власна страва</h2>
           <hr>
          <form class="form">
-         Назва страви 
-             <pr class="FormSpace"></pr>
-             <input type="text" value="Ввведіть назву вашої страви" class="text"><br>
-             <br>
-        Категорія
+             <p> Назва страви
+      <pr class="FormSpace"></pr>
+                
+            <input type="text" value="Введіть назву страви" class="text" id="text"  required pattern="^[а-яА-Я\s]+$"><br>
+                  </p> 
+             
+             <p>Категорія
              <pr class="OptionSpace"></pr>
-             <select class="Category">
-            <option value="1">Холодні страви</option>
-            <option value="2">Страви з сільсько-господарської птиці, пернатої дичі та кролика</option>
-            <option value="3">Соуси</option>
-                <option value="4">Супи</option>
-            <option value="5">Страви з риби морепродуктів і раків</option>
-            <option value="6">Страви з м'яса та м'ясних виробів</option>
-                <option value="7">Страви з картоплі овочів та грибів</option>
-            <option value="8">Солодкі страви</option>
-            <option value="9">Страви з творогу</option>
-                <option value="10">Страви з макаронних виробів</option>
-            <option value="11">Гарніри</option>
-            <option value="12">Страви з бобових</option>
-                <option value="13">Страви з круп</option>
-            <option value="14">Борошняні вироби</option>
-            <option value="15">Страви з яєць</option>
-                <option value="16">Напої</option>
+             <select class="Category" siz="3" id="category" required >
+            <option class="option" value="1" style="text-align:center">Холодні страви</option>
+            <option class="option" value="2">Страви з сільсько-господарської птиці, пернатої дичі та кролика</option>
+            <option class="option" value="3">Соуси</option>
+                <option  class="option"value="4">Супи</option>
+            <option  class="option"value="5">Страви з риби морепродуктів і раків</option>
+            <option class="option" value="6">Страви з м'яса та м'ясних виробів</option>
+                <option class="option" value="7">Страви з картоплі овочів та грибів</option>
+            <option class="option" value="8">Солодкі страви</option>
+            <option class="option" value="9">Страви з творогу</option>
+                <option class="option"  value="10">Страви з макаронних виробів</option>
+            <option class="option" value="11">Гарніри</option>
+            <option class="option" value="12">Страви з бобових</option>
+                <option class="option" value="13">Страви з круп</option>
+            <option class="option" value="14">Борошняні вироби</option>
+            <option class="option" value="15">Страви з яєць</option>
+                <option  class="option" value="16">Напої</option>
           </select>
-             <br><br>
-            Інгрідієнти
+                 </p>
+             <br>
+             <p>Інгрідієнти</p>
              <table class="table">
                  <td>Назва</td>
-                 <td>Вага(гр)</td>
-                 <td>Ціна(грн)</td>
+                 <td>Брутто(гр)</td>
+                    <td>Нетто(гр)</td>
+                 <td>Ціна</td>
              </table>
              <!--Here will be aded product name, mass and prize-->
              <!--Ось тут ці інгредієнта мають додатись код js в файлі FormJS-->
              <table class="ChoosenIngr" id="Choosen">
-                 <tr >
-                 <td class="NameIngr">          
-                     <input type="text" value="Name" class="TextNameIngr">
-                  </td>
-                 <td class="MassIngr">
-                     <input type="text" value="100гр" class="TextMassIngr">
-                 </td>
-                 <td class="PrizeIngr">
-                     <input type="text" value="200грн" class="TextPrizeIngr">
-                 </td>
-                 </tr>
+               
              </table>
-             <input type="text" value="Почніть вводити назву(виберіть продукт із списку)" class="NameOfIngr"><br>
-              <!--Here will be list of ingridians-->
-             <!--Ось тут список з інгредієнтами-->
-         <dl class="Ing">  
-             
-         <input type="text" value="Авокадо"  id="Ingridian" disabled>                  
-         <input type="text" value="Ананас"  id="Ingri" disabled>  
-        </dl>
+             <input type="text" value="Почніть вводити назву" pattern="^[а-яА-Я\s]+$" required class="NameOfIngr"  id="NameOfIngrst"><br>       
+    
              <button class="Back" id="button">Назад</button>    
              <button class="Ad" id="button">Додати</button>
+             <button class="AdIngridians" id="button" >Додати інгредієнт</button>
+             
          </form>
      </div>
-    
     <footer>
           <div id="lowerLineDiv">Copyright (c) KK. All rights reserved.</div>
     </footer>
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-    <script language="JavaScript" type="text/javascript" src="/./js/FormJS.js"></script>
-</body>
+     <script type="text/javascript" src="js/FormJS.js"></script>
+    </body>
  
 </html>
