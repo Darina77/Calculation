@@ -1,11 +1,16 @@
 package com.google.devrel.calculation.domain;
 
+import com.googlecode.objectify.annotation.Entity;
+import com.googlecode.objectify.annotation.Id;
+
 /**
  * Клас продуктів
  * @author Darina
  */
+@Entity
 public class Product
 {
+    @Id
     private String name;
     private int price; //ціна в копійках за один кг або за одну штуку
     private double bruttoWeight;
@@ -24,7 +29,7 @@ public class Product
         this.price = price;
     }
 
-
+    private Product() {}
     /**
      * @return  назву продукту
      */

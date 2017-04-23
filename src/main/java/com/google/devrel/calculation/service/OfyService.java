@@ -1,4 +1,5 @@
 package com.google.devrel.calculation.service;
+import com.google.devrel.calculation.domain.Product;
 import com.google.devrel.calculation.domain.Recipe;
 import com.googlecode.objectify.Objectify;
 import com.googlecode.objectify.ObjectifyFactory;
@@ -12,6 +13,7 @@ public class OfyService {
      * This static block ensure the entity registration.
      */
     static {
+        factory().register(Product.class);
         factory().register(Recipe.class);
     }
 

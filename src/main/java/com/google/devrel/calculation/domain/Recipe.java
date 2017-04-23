@@ -1,6 +1,9 @@
 package com.google.devrel.calculation.domain;
 
 import com.google.devrel.calculation.form.ProductForm;
+import com.google.devrel.calculation.form.RecipeForm.RecipeType;
+import com.googlecode.objectify.annotation.Entity;
+import com.googlecode.objectify.annotation.Id;
 
 import java.util.HashMap;
 import java.util.List;
@@ -12,19 +15,23 @@ import java.util.NoSuchElementException;
  * Вносяться необхідні інгредієнти з розрахунком на 10кг
  * @author  Darina
  */
+@Entity
 public class Recipe
 {
+    @Id
     private String name;
     private Map<Product, Double> ingredients; // продукти та іх необхідна норма (вага в кг)
     private double standardPortionSize;
+    private RecipeType type;
 
     /**
      * Конструктор рецептів
      * @param name назва рецепта
      */
-    public Recipe(String name, double standardPortionSize)
+    public Recipe(String name, RecipeType type, double standardPortionSize)
     {
         this.name = name;
+        this.type = type;
         this.standardPortionSize = standardPortionSize;
         ingredients = new HashMap<>();
     }
@@ -101,28 +108,39 @@ public class Recipe
         else throw new NoSuchElementException();
     }
 
-    public String getName()
-    {
-        return name;
-    }
+    public String getName() { return name; }
 
     public double getStandardPortionSize() {return standardPortionSize;}
-
 
     public double countSumOfAll() {
         double sum = 0;
         for(Product product: ingredients.keySet())
-        {
             sum += product.sum(ingredients.get(product));
-        }
         return sum;
     }
 
-    public void update(double standardPortionSize, List<ProductForm> productForms) {
-        //todo якщо є якісь розбіхності з обьектом змінити іх на передані параметри
+    public RecipeType getType(){ return type; }
+
+    public void update(double standardPortionSize, RecipeType type, List<ProductForm> productForms) {
+        if(standardPortionSize > 0) this.standardPortionSize = standardPortionSize;
+        this.type = type;
+        add(productForms);
     }
 
     public void add(List<ProductForm> productForms) {
-        //todo додати всі продукти з форми
+        for(ProductForm product: productForms)
+            add(product);
+    }
+
+    public void add(ProductForm productForm){
+        String name = productForm.getName();
+        int price = productForm.getPrice();
+        double bruttoWeight = productForm.getBruttoWeight();
+        double nettoWeight = productForm.getNettoWeight();
+        if (name == null) throw new NullPointerException("Name can`t be null");
+        else if (price <= 0 || (bruttoWeight <= 0 && nettoWeight <= 0))
+            throw new IllegalArgumentException("Arguments must be more then 0");
+        else
+            add(new Product(name, bruttoWeight, nettoWeight, price));
     }
 }
