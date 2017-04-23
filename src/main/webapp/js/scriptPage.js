@@ -15,7 +15,8 @@ $(document).ready(function(){
             var node = $(DISH_TEMPLATE);
             node.find('img').attr('src', '/img/'+i+'.jpeg');
             node.attr('id', i);
-            $('#innerGrid-dish').append(node);  
+            $('#innerGrid-dish').append(node); 
+            
         }
         
     }
@@ -25,7 +26,19 @@ $(document).ready(function(){
     
 //Тут відбудеться event при натисканні на якусь клітику зі стравою
     $(".dish").click(function(){
-      
+       
+       $("#content").load('../html/reciepe.html', function(){ 
+             $("#addDish").click(function(){
+        //тут очищюється content, видаляються клітинки зі стравами...
+        $("#content").empty();
+        // Тут завантажиться форма для створення своєї страви, а саме  //productForm.html
+        // завантажиться в id="#content"
+         $("#content").load('../html/productForm.html', function(){ 
+             
+          });
+        });
+          });
+        
     });
     
     $(".dish").mouseenter(function() {
@@ -52,15 +65,7 @@ $(document).ready(function(){
         
 //натискаємо "Додати свою страву", id=#content
 //it's ajax: https://www.w3schools.com/jquery/jquery_ajax_load.asp
-    $("#addDish").click(function(){
-        //тут очищюється content, видаляються клітинки зі стравами...
-        $("#content").empty();
-        // Тут завантажиться форма для створення своєї страви, а саме  //productForm.html
-        // завантажиться в id="#content"
-         $("#content").load('../html/productForm.html', function(){ 
-             
-         });
-    });
+    
    });
 
 });

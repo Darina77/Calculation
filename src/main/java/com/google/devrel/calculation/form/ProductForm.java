@@ -15,7 +15,7 @@ public class ProductForm {
         this.nettoWeight = nettoWeight;
     }
 
-    public ProductForm() {}
+    private ProductForm() {}
 
     public String getName(){return name;}
 

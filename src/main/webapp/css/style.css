@@ -247,82 +247,91 @@ button:hover {
     font-size: 80px;
   }
 }
-.FormSpace {
-  margin-right: 100px;
+/*
+.FormSpace{
+     margin-right: 100px;
 }
-.OptionSpace {
-  margin-right: 140px;
+.OptionSpace{
+     margin-right:140px;
 }
-.text {
-  width: 350px;
+.text{
+    width:350px;
 }
-.form {
-  font-size: 25px;
+.form{
+    font-size:25px;
 }
-.table {
-  width: 700px;
-  background-color: #f76e5d;
+.table{
+    width:700px;
+     background-color: @elementsColor;
+     margin: auto;
+}
+.Category{
+     width:350px;
+    text-align: center;
+    overflow-y: scroll;
+        overflow-x: hidden;
+overflow:hidden
+}
+
+.option{
+    text-align: center;
+}
+.ChoosenIngr{
+    width:700px;
+ margin: auto;
+     background-color: darkgrey;
+}
+.TextNameIngr{
+    background-color: darkgrey;
+}
+.TextMassIngr{
+    background-color: darkgrey;
+}
+.TextPrizeIngr{ 
+    width:101%;
+    background-color: darkgrey;
+}
+.NameOfIngr{
+    width:700px;
   margin: auto;
 }
-.Category {
-  width: 350px;
-  text-align: center;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  overflow: hidden;
+#button{
+     width:214px;
+    height:80px;
+    margin: 10px;
 }
-.option {
-  text-align: center;
+.AdIngridians{
+  //  margin-left: 220px;
+    color:white;
+      margin-top: 20%;
 }
-.ChoosenIngr {
-  width: 700px;
-  margin: auto;
-  background-color: darkgrey;
+.Back{
+    background-color:grey;
+    color:white;
 }
-.TextNameIngr {
-  background-color: darkgrey;
+.Ad{
+  //  margin-left: 220px;
+    color:white;
+    margin-bottom: 10%;
 }
-.TextMassIngr {
-  background-color: darkgrey;
+
+p{
+    font-family:monospace, sans-serif;
+    color:dimgrey;
+    font-weight:600;
 }
-.TextPrizeIngr {
-  width: 101%;
-  background-color: darkgrey;
+
+#Ingridian{
+    width:700px;
+    margin-left:50px;
+
 }
-.NameOfIngr {
-  width: 700px;
-  margin: auto;
-}
-#button {
-  width: 214px;
-  height: 80px;
-  margin: 10px;
-}
-.AdIngridians {
-  color: white;
-  margin-top: 20%;
-}
-.Back {
-  background-color: grey;
-  color: white;
-}
-.Ad {
-  color: white;
-  margin-bottom: 10%;
-}
-p {
-  font-family: monospace, sans-serif;
-  color: dimgrey;
-  font-weight: 600;
-}
-#Ingridian {
-  width: 700px;
-  margin-left: 50px;
-}
+*/
 .formProceed {
   position: relative;
   width: 70%;
   margin: auto;
+  font-size: 25px;
   color: #3e3c4a;
   padding-bottom: 80px;
   padding-top: 20px;
@@ -435,4 +444,111 @@ p {
 }
 #printButton:hover {
   background-color: #5c5048;
+}
+.FormSpace {
+  margin-right: 100px;
+}
+.OptionSpace {
+  margin-right: 140px;
+}
+.text {
+  width: 350px;
+}
+.form {
+  font-size: 25px;
+}
+.table {
+  width: 85%;
+  background-color: #f76e5d;
+  margin: auto;
+}
+.tableS {
+  width: 700px;
+  color: #f76e5d;
+  margin: auto;
+  font-family: monospace, sans-serif;
+  font-weight: 800;
+}
+.Category {
+  width: 350px;
+  text-align: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  overflow: hidden;
+}
+.option {
+  text-align: center;
+}
+.ChoosenIngr {
+  width: 85%;
+  margin: auto;
+  background-color: darkgrey;
+}
+/*
+.row{
+    padding-left: 10%;
+     padding-right: 10%;
+}
+*/
+.TextNameIngr {
+  width: 100%;
+  background-color: darkgrey;
+}
+.TextMassIngr {
+  width: 100%;
+  background-color: darkgrey;
+}
+.TextMassBruttoIngr {
+  width: 100%;
+  background-color: darkgrey;
+}
+.TextPrizeIngr {
+  width: 100%;
+  background-color: darkgrey;
+}
+.NameOfIngr {
+  width: 85%;
+  margin: auto;
+}
+.NameOfDish {
+  width: 450px;
+  height: 40px;
+  margin: auto;
+}
+#button {
+  width: 250px;
+  height: 80px;
+  margin: 10px;
+  font-family: MyriadPro-Regular;
+  font-weight: 200;
+}
+.AdDish {
+  color: white;
+  height: 49px;
+}
+.AdIngridians {
+  color: white;
+  margin-top: 20%;
+  font-weight: 100;
+}
+.Back {
+  background-color: grey;
+  color: white;
+}
+.Ad {
+  color: white;
+  margin-bottom: 10%;
+}
+p {
+  font-family: MyriadPro-Regular;
+  color: dimgrey;
+}
+td {
+  color: white;
+}
+.NameOfRecepie {
+  width: 100%;
+  height: 40px;
+  font: MyriadPro-Regular;
+  color: #f76e5d;
 }
