@@ -1,21 +1,16 @@
 $(document).ready(function(){
     //here will be aded recepie when searchpage will be opened
- /*    fillDishGrid();
+     var MassyfRecepie=["Огірок","Бешбармак","Трісіні","Диявольські яйця","Фаршмак"];
+   fillDishGrid();
     function fillDishGrid(){
-        var DISH_TEMPLATE = $(".dish")[0].outerHTML;
-        for (var i=1; i<5; i++){
-            var node = $(DISH_TEMPLATE);
-            node.find('input').attr('type',"text");
-            node.attr('id', i);
-            //ось тут замість огірок має бути назва рецепту
-            node.attr('value',"Огірок");
-            node.attr('disabled');
-            node.attr('class',"NameOfRecepie")
-            $('#innerGrid-dish').append(node);  
+        for(var i=0;i<MassyfRecepie.length;i++){
+       var all=" <div class=\"ha col col-xs-12 col-sm-6 col-lg-3\" id=\"0\"><input type=\"text\" value=\""+MassyfRecepie[i]+"\"  disabled class=\"NameOfRecepie\"  id=\"1\" onclick=\"choose()\"> </div>";
+
+      $('.row').append(all);   }
         }
         
-        
-    }*/
+    
+   
 $("#addDish").click(function(){
         //тут очищюється content, видаляються клітинки зі стравами...
         $("#content").empty();
@@ -26,7 +21,16 @@ $("#addDish").click(function(){
          });
     }); 
 
-
-
-
+//функція для пошуку при нажатті клавіші викликається ця функція у ній треба викликати функцію 
+    //fillDishGrid() яку заповнюється масивом рецептів також тут треба перевизначити MassyfRecepie
+function dof(){
+    
+    
+}
+//якщо на якийсь рецепт нажмуть
+ function choose(){
+    alert("f");
+    
+}
+   
 });
