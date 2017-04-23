@@ -5,10 +5,7 @@ import com.google.devrel.calculation.form.RecipeForm.RecipeType;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.NoSuchElementException;
+import java.util.*;
 
 /**
  * Рецепти страв з розрахунком на вагу
@@ -20,7 +17,8 @@ public class Recipe
 {
     @Id
     private String name;
-    private Map<Product, Double> ingredients; // продукти та іх необхідна норма (вага в кг)
+    private List<Product> ingredients;//продукти
+    private List<Double> norms;// необхідна норма (вага в кг)
     private double standardPortionSize;
     private RecipeType type;
 
@@ -33,7 +31,8 @@ public class Recipe
         this.name = name;
         this.type = type;
         this.standardPortionSize = standardPortionSize;
-        ingredients = new HashMap<>();
+        ingredients = new ArrayList<>();
+        norms = new ArrayList<>();
     }
 
 
@@ -44,7 +43,14 @@ public class Recipe
     public void add(Product product)
     {
         if (product == null) throw  new NullPointerException();
-        ingredients.put(product, countNorm(product));
+        if(!ingredients.contains(product)) {
+            ingredients.add(product);
+            norms.add(countNorm(product));
+        } else {
+            delete(product);
+            ingredients.add(product);
+            norms.add(countNorm(product));
+        }
     }
 
     private double countNorm(Product product){
@@ -73,9 +79,11 @@ public class Recipe
     public void delete(Product product)
     {
         if (product == null) throw new NullPointerException();
-        if (ingredients.containsKey(product))
+        if (ingredients.contains(product))
         {
-            ingredients.remove(product);
+            int place = Collections.binarySearch(ingredients, product);
+            ingredients.remove(place);
+            norms.remove(place);
         }
         else throw new NoSuchElementException();
     }
@@ -88,8 +96,11 @@ public class Recipe
     {
         if (product == null) throw new NullPointerException();
 
-        if (ingredients.containsKey(product))
-            return ingredients.get(product);
+        if (ingredients.contains(product)){
+            int place = Collections.binarySearch(ingredients, product);
+            return norms.get(place);
+        }
+
 
         else throw new NoSuchElementException();
     }
@@ -102,8 +113,10 @@ public class Recipe
     {
         if (product == null) throw new NullPointerException();
 
-        if (ingredients.containsKey(product))
-            return product.sum(ingredients.get(product));
+        if (ingredients.contains(product)) {
+            int place = Collections.binarySearch(ingredients, product);
+            return product.sum(norms.get(place));
+        }
 
         else throw new NoSuchElementException();
     }
@@ -114,8 +127,8 @@ public class Recipe
 
     public double countSumOfAll() {
         double sum = 0;
-        for(Product product: ingredients.keySet())
-            sum += product.sum(ingredients.get(product));
+        for(Product product: ingredients)
+            sum += product.sum(getNorm(product));
         return sum;
     }
 

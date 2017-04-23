@@ -24,7 +24,7 @@ import static com.google.devrel.calculation.service.OfyService.ofy;
 public class CalculationApi {
 
     @ApiMethod( name="getRecipesByType", path = "getRecipesByType", httpMethod = ApiMethod.HttpMethod.GET)
-    public List<Recipe> getRecipesByType(@Named("type") RecipeType type)
+    public List<Recipe> getRecipesByType(@Named("type") final RecipeType type)
     {
         Query<Recipe> query = ofy().load().type(Recipe.class).order("name");
         query = query.filter("type =", type);
@@ -64,8 +64,8 @@ public class CalculationApi {
     }
 
     @ApiMethod(name = "getRecipe", path = "getRecipe", httpMethod = ApiMethod.HttpMethod.GET)
-    public Recipe getRecipe(@Named("name") String name) {
-        Key<Recipe> recipeKey =  Key.create(Recipe.class, name);
+    public Recipe getRecipe(@Named("name")final String name) {
+        Key recipeKey =  Key.create(Recipe.class, name);
         Recipe recipe = (Recipe) ofy().load().key(recipeKey).now();
         return recipe;
     }

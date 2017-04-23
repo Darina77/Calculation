@@ -8,7 +8,7 @@ import com.googlecode.objectify.annotation.Id;
  * @author Darina
  */
 @Entity
-public class Product
+public class Product implements Comparable<Product>
 {
     @Id
     private String name;
@@ -62,4 +62,8 @@ public class Product
     public double getBruttoWeight() {return bruttoWeight;}
     public double getNettoWeight() {return nettoWeight;}
 
+    @Override
+    public int compareTo(Product that) {
+        return this.getName().compareTo(that.getName());
+    }
 }
