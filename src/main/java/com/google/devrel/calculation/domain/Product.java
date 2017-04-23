@@ -1,11 +1,16 @@
 package com.google.devrel.calculation.domain;
 
+import com.googlecode.objectify.annotation.Entity;
+import com.googlecode.objectify.annotation.Id;
+
 /**
  * Клас продуктів
  * @author Darina
  */
-public class Product
+@Entity
+public class Product implements Comparable<Product>
 {
+    @Id
     private String name;
     private int price; //ціна в копійках за один кг або за одну штуку
     private double bruttoWeight;
@@ -24,7 +29,7 @@ public class Product
         this.price = price;
     }
 
-
+    private Product() {}
     /**
      * @return  назву продукту
      */
@@ -57,4 +62,8 @@ public class Product
     public double getBruttoWeight() {return bruttoWeight;}
     public double getNettoWeight() {return nettoWeight;}
 
+    @Override
+    public int compareTo(Product that) {
+        return this.getName().compareTo(that.getName());
+    }
 }

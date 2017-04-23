@@ -15,11 +15,15 @@ public class ProductForm {
         this.nettoWeight = nettoWeight;
     }
 
+    private ProductForm() {}
+
     public String getName(){return name;}
 
     public int getPrice(){return price;}
 
     public double getBruttoWeight(){return bruttoWeight;}
 
-    private double getNettoWeight(){return nettoWeight;}
+    public double getNettoWeight(){return nettoWeight;}
+
+
 }
