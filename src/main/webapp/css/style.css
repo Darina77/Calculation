@@ -251,12 +251,11 @@ button:hover {
     font-size: 80px;
   }
 }
-<<<<<<< HEAD
 .FormSpace {
   margin-right: 100px;
 }
 .OptionSpace {
-  margin-right: 137px;
+  margin-right: 140px;
 }
 .text {
   width: 350px;
@@ -266,15 +265,22 @@ button:hover {
 }
 .table {
   width: 700px;
-  margin-left: 145px;
   background-color: #f76e5d;
+  margin: auto;
 }
 .Category {
   width: 350px;
+  text-align: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  overflow: hidden;
+}
+.option {
+  text-align: center;
 }
 .ChoosenIngr {
   width: 700px;
-  margin-left: 145px;
+  margin: auto;
   background-color: darkgrey;
 }
 .TextNameIngr {
@@ -284,29 +290,35 @@ button:hover {
   background-color: darkgrey;
 }
 .TextPrizeIngr {
-  width: 100%;
+  width: 101%;
   background-color: darkgrey;
 }
 .NameOfIngr {
   width: 700px;
-  margin-left: 45px;
+  margin: auto;
 }
 #button {
-  width: 233px;
+  width: 214px;
+  height: 80px;
+  margin: 10px;
+}
+.AdIngridians {
+  color: white;
+  margin-top: 10%;
 }
 .Back {
-  margin-left: 35px;
   background-color: grey;
+  color: white;
 }
 .Ad {
-  margin-left: 225px;
+  color: white;
+  margin-bottom: 10%;
 }
-.ListOfIngr {
-  width: 945px;
+p {
+  font-family: monospace, sans-serif;
+  color: dimgrey;
+  font-weight: 600;
 }
-#Ingridian {
-  width: 700px;
-  margin-left: 50px;
+td {
+  color: white;
 }
-=======
->>>>>>> 37d9bdd76716c5ff55ed5bbdc9c9a70dde6b7622
