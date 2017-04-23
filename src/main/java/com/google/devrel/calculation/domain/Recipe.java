@@ -26,6 +26,21 @@ public class Recipe
      * Конструктор рецептів
      * @param name назва рецепта
      */
+
+
+    public Recipe(String name,
+                  List<ProductForm> ingredients,
+                  RecipeType type,
+                  double standardPortionSize)
+    {
+        this.name = name;
+        this.type = type;
+        this.standardPortionSize = standardPortionSize;
+        this.ingredients = new ArrayList<>();
+        norms = new ArrayList<>();
+        add(ingredients);
+    }
+/*
     public Recipe(String name, RecipeType type, double standardPortionSize)
     {
         this.name = name;
@@ -33,9 +48,8 @@ public class Recipe
         this.standardPortionSize = standardPortionSize;
         ingredients = new ArrayList<>();
         norms = new ArrayList<>();
-    }
-
-
+    }*/
+    private Recipe(){}
     /**
      * Додавання нового інгрідієнту в рецепт
      * @param product продукт

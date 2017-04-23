@@ -4,6 +4,8 @@ import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
 import com.google.api.server.spi.config.Named;
 import com.google.devrel.calculation.Constants;
+import com.google.devrel.calculation.domain.Calculation;
+import com.google.devrel.calculation.domain.Portion;
 import com.google.devrel.calculation.domain.Recipe;
 import com.google.devrel.calculation.form.ProductForm;
 import com.google.devrel.calculation.form.RecipeForm;
@@ -23,10 +25,26 @@ import static com.google.devrel.calculation.service.OfyService.ofy;
 
 public class CalculationApi {
 
+
+    @ApiMethod( name="calculateRecipe", path = "calculateRecipe", httpMethod = ApiMethod.HttpMethod.GET)
+    public Portion calculateRecipe(final Recipe recipe,
+                                   @Named("onePortionWeight") final double onePortionWeight,
+                                   @Named("extra") final double extra)
+    {
+        if(recipe == null) throw new NullPointerException("Recipe cann`t be null");
+        Calculation calculation;
+        if (onePortionWeight == 0 || extra == 0)
+            calculation = new Calculation(recipe);
+        else
+            calculation = new Calculation(recipe, onePortionWeight, extra);
+        Portion resPortion = calculation.getPortion();
+        return resPortion;
+    }
+
     @ApiMethod( name="getRecipesByType", path = "getRecipesByType", httpMethod = ApiMethod.HttpMethod.GET)
     public List<Recipe> getRecipesByType(@Named("type") final RecipeType type)
     {
-        Query<Recipe> query = ofy().load().type(Recipe.class).order("name");
+        Query<Recipe> query = ofy().load().type(Recipe.class);
         query = query.filter("type =", type);
         return query.list();
     }
@@ -54,11 +72,8 @@ public class CalculationApi {
         } else {
             result.update(standardPortionSize, type, productForms);
         }
-        try {
-            ofy().save().entity(result).now();
-        } catch (Exception e){
-            e.printStackTrace();
-        }
+
+        ofy().save().entity(result).now();
 
         return result;
     }
