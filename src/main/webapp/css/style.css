@@ -264,9 +264,16 @@ button:hover {
   font-size: 25px;
 }
 .table {
-  width: 700px;
+  width: 85%;
   background-color: #f76e5d;
   margin: auto;
+}
+.tableS {
+  width: 700px;
+  color: #f76e5d;
+  margin: auto;
+  font-family: monospace, sans-serif;
+  font-weight: 800;
 }
 .Category {
   width: 350px;
@@ -279,32 +286,50 @@ button:hover {
   text-align: center;
 }
 .ChoosenIngr {
-  width: 700px;
+  width: 85%;
   margin: auto;
   background-color: darkgrey;
 }
 .TextNameIngr {
+  width: 100%;
   background-color: darkgrey;
 }
 .TextMassIngr {
+  width: 100%;
+  background-color: darkgrey;
+}
+.TextMassBruttoIngr {
+  width: 100%;
   background-color: darkgrey;
 }
 .TextPrizeIngr {
-  width: 101%;
+  width: 100%;
   background-color: darkgrey;
 }
 .NameOfIngr {
-  width: 700px;
+  width: 85%;
+  margin: auto;
+}
+.NameOfDish {
+  width: 450px;
+  height: 40px;
   margin: auto;
 }
 #button {
-  width: 214px;
+  width: 250px;
   height: 80px;
   margin: 10px;
+  font-family: MyriadPro-Regular;
+  font-weight: 200;
+}
+.AdDish {
+  color: white;
+  height: 49px;
 }
 .AdIngridians {
   color: white;
-  margin-top: 10%;
+  margin-top: 20%;
+  font-weight: 100;
 }
 .Back {
   background-color: grey;
@@ -315,10 +340,15 @@ button:hover {
   margin-bottom: 10%;
 }
 p {
-  font-family: monospace, sans-serif;
+  font-family: MyriadPro-Regular;
   color: dimgrey;
-  font-weight: 600;
 }
 td {
   color: white;
+}
+.NameOfRecepie {
+  width: 100%;
+  height: 40px;
+  font: MyriadPro-Regular;
+  color: #f76e5d;
 }

@@ -27,7 +27,7 @@
              <p> Назва страви
       <pr class="FormSpace"></pr>
                 
-            <input type="text" value="Введіть назву страви" class="text" id="text"  required pattern="^[а-яА-Я\s]+$"><br>
+            <input type="text" value=" Введіть назву страви" class="text" id="text"  required pattern="^[а-яА-Я\s]+$"><br>
                   </p> 
              
              <p>Категорія
@@ -53,22 +53,27 @@
                  </p>
              <br>
              <p>Інгрідієнти</p>
+             
              <table class="table">
-                 <td>Назва</td>
-                 <td>Вага(гр)</td>
-                 <td>Ціна(грн)</td>
+                 <td id="012">Назва</td>
+                 <td id="013">Брутто(гр)</td>
+                 <td id="014">Нетто(гр)</td>
+                 <td id="015">Ціна</td>
              </table>
+              
              <!--Here will be aded product name, mass and prize-->
-             <!--Ось тут ці інгредієнта мають додатись код js в файлі FormJS-->
+           <!--Ось тут ці інгредієнта мають додатись код js в файлі FormJS-->
+             
              <table class="ChoosenIngr" id="Choosen">
                
              </table>
-             <input type="text" value="Почніть вводити назву" pattern="^[а-яА-Я\s]+$" required class="NameOfIngr"  id="NameOfIngrst"><br>       
+             <p> <input type="text" value="  Почніть вводити назву" pattern="^[а-яА-Я\s]+$" required class="NameOfIngr"  id="NameOfIngrst"><br>  </p>     
     
-             <button class="Back" id="button">Назад</button>    
-             <button class="Ad" id="button">Додати</button>
-             <button class="AdIngridians" id="button" >Додати інгредієнт</button>
+              <button class="Back" id="button">Назад</button>  
              
+             <button class="AdIngridians" id="button" >Додати інгредієнт</button>
+             <button class="Ad" id="button">Додати</button>
+            
          </form>
      </div>
     <footer>
