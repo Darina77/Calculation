@@ -67,8 +67,8 @@ public class CalculationApi {
 
         Recipe result = getRecipe(name);
         if (result == null){
-            result = new Recipe(name, type, standardPortionSize);
-            result.add(productForms);
+            result = new Recipe(name, productForms, type, standardPortionSize);
+            //result.add(productForms);
         } else {
             result.update(standardPortionSize, type, productForms);
         }

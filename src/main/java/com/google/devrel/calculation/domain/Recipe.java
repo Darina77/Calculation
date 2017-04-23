@@ -48,7 +48,8 @@ public class Recipe
         this.standardPortionSize = standardPortionSize;
         ingredients = new ArrayList<>();
         norms = new ArrayList<>();
-    }*/
+    }
+    */
     private Recipe(){}
     /**
      * Додавання нового інгрідієнту в рецепт
