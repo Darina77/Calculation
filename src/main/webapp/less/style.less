@@ -10,8 +10,6 @@
 @minLengthFooter: 80%;
 @marginBlock: (100%- @lengthBlock)/2;
 @headerHeight: 480px;
-@font: MyriadPro-Regular;
-@boldFont: MyriadPro-Bold;
 @font-face {
     font-family: MyriadPro-Bold; /* Имя шрифта */
     src: url('../fonts/MyriadPro-Bold.otf'); /* Путь к файлу со шрифтом */
@@ -24,7 +22,7 @@ body, html
 {
   background-color: @bodycolor;
   min-width: @minWidth;
- // font-family:  @font;
+  font-family:  MyriadPro-Regular;
 }
 #upBlock
 {
@@ -33,9 +31,9 @@ body, html
      height: @headerHeight;
      background-color: @upBlockColor;
      color: @textColor;
-     padding-top: 210px;
+     padding-top: 220px;
      text-align: center;
- 
+     font-family: MyriadPro-Bold;
      h1
      {
        
@@ -44,7 +42,7 @@ body, html
         font-weight: bold;
         color: @textColor;
         margin-bottom: 25px;
-        font-family: @boldFont;
+        font-family: MyriadPro-Bold;
      }
     .orange-white-title 
     {
@@ -75,7 +73,7 @@ body, html
      background-repeat: no-repeat;
      background-size: 100%;
      background-position: 0px 100%;
-    // padding-bottom: 80px;
+    
 }
 #lineDiv
 {
@@ -96,7 +94,7 @@ body, html
     z-index: 800;
     font-size: 23px;
     width: 500px;
-  font-family: MyriadPro-Regular;
+    font-family: MyriadPro-Regular;
 }
 #content
 {
@@ -113,12 +111,12 @@ body, html
     h2 {
         font-weight: bold;
         color: @upBlockColor;
-        font-family: @boldFont;
+        font-family: MyriadPro-Bold;
     }
     .underTitle
     {
         color: @elementsColor;
-        //font-family: MyriadPro-Regular;
+        font-family: MyriadPro-Regular;
     }
    
 }
@@ -145,7 +143,7 @@ body, html
         color: @elementsColor;
         margin-top: -2px;
         margin-left: 50px;
-        font-family: @boldFont;
+        font-family: MyriadPro-Bold;
     }
     
 }
@@ -157,7 +155,7 @@ body, html
     margin: auto;
     background-color:  @elementsColor;
     font-size: 14px;
-   // font-family: MyriadPro-Regular;
+    font-family: MyriadPro-Regular;
     padding-top: 12px;
     
 }
@@ -191,17 +189,15 @@ footer
     margin-left: 50px;
     margin-bottom: 25px;
     font-size: 14px;
-  //  font-family: MyriadPro-Regular;
+    font-family: MyriadPro-Regular;
 }
 .newPositionedContent 
 {
     margin-top: -@headerHeight*0.8+50px;
     hr 
     {
-     
-       border-color:  #b5b5b5;
+       border-color: #b5b5b5;
        width: 70%;
-      
     }
 }
 #grid-dish
@@ -238,7 +234,7 @@ footer
           
           color: @textColor;
           font-size: 26px;
-          font-family: @boldFont;
+          font-family: MyriadPro-Bold;
           margin-left: 15px;
           margin-right: 15px;
         }
@@ -252,10 +248,7 @@ footer
     }
      
 }
-
-
-button 
-
+button
 {
     position: relative;
     width: 250px;
@@ -267,21 +260,18 @@ button
     color: @textColor;
     background-color: @elementsColor;
     font-weight: bold;
-    margin-bottom: 50px;
       
 }
 button:hover
 {
     background-color: #e5695a; 
 }
-
 #addDish
 {
     width: 400px;
     padding-bottom: 6px;
     margin-bottom: 60px;
 }
-
 
 @media(max-width: 991px)
 {
@@ -334,281 +324,7 @@ button:hover
         }
       }
     }
-
 }
-
-/*
-.FormSpace{
-     margin-right: 100px;
-}
-.OptionSpace{
-     margin-right:140px;
-}
-.text{
-    width:350px;
-}
-.form{
-    font-size:25px;
-}
-.table{
-    width:700px;
-     background-color: @elementsColor;
-     margin: auto;
-}
-.Category{
-     width:350px;
-    text-align: center;
-    overflow-y: scroll;
-        overflow-x: hidden;
-overflow:hidden
-}
-
-.option{
-    text-align: center;
-}
-.ChoosenIngr{
-    width:700px;
- margin: auto;
-     background-color: darkgrey;
-}
-.TextNameIngr{
-    background-color: darkgrey;
-}
-.TextMassIngr{
-    background-color: darkgrey;
-}
-.TextPrizeIngr{ 
-    width:101%;
-    background-color: darkgrey;
-}
-.NameOfIngr{
-    width:700px;
-  margin: auto;
-}
-#button{
-     width:214px;
-    height:80px;
-    margin: 10px;
-}
-.AdIngridians{
-  //  margin-left: 220px;
-    color:white;
-      margin-top: 20%;
-}
-.Back{
-    background-color:grey;
-    color:white;
-}
-.Ad{
-  //  margin-left: 220px;
-    color:white;
-    margin-bottom: 10%;
-}
-
-p{
-    font-family:monospace, sans-serif;
-    color:dimgrey;
-    font-weight:600;
-}
-
-#Ingridian{
-    width:700px;
-    margin-left:50px;
-
-}
-*/
-
-.formProceed
-{
-    position: relative;
-    width: 70%;
-    margin: auto;
-    font-size: 25px;
-    color: @upBlockColor;
-    div
-    {
-        text-align: left;
-    }
-    .formTitle
-    {
-        color: @elementsColor;
-        font-family: @boldFont;
-        font-size: 30px;
-        margin-bottom: 10px;
-    }
-    
-    .myInput
-    {
-        position: relative;
-        border: 2px solid @elementsColor;
-        text-align: center;
-        background-color: @lowerBlockColor; 
-        width: 80%;
-    }
-    .myInput:focus 
-    {
-
-         outline: none;
-    }
-    .Back 
-    {
-      height: 50px;  
-      width: 60%;
-      margin: 0;
-    }
-    .Back:hover
-    {
-       background-color:  #717171;
-    }
-    .send
-    {
-        position: relative;
-        width: 100%;
-        height: 50px;
-        border: none; 
-        font-size: 30px;
-        color: @textColor;
-        background-color: @elementsColor;
-        font-weight: bold;
-    }
-    .send:hover
-    {
-         background-color: #e5695a; 
-    }
-    .formRow
-    {
-        margin-bottom: 50px; 
-    }
-    
-    padding-bottom: 80px;
-    padding-top: 20px;
-    
-
-    td
-    {
-       color :white;
-    }
-    
-}
-
-.table-shadow
-{
-   width: 86%; 
-   box-shadow: 6px 6px 1px 3px #b9babe;
-   margin: auto;
-   background-color: #efe4dd;
-   padding: 8px;
-   padding-bottom: 12px;
-   padding-top: 12px;
-}
-#resultTable
-{
-  
-   width: 100%; 
-  margin: auto;
-  color: #453328;
-   caption, th
-    {
-         background-color: #efe4dd;
-         text-align: center;
-         font-size: 30px;
-         font-weight: bold;
-         color: #453328;
-    }
-    
-    
-    .tableHead
-    {
-         
-        th
-        {
-             font-size: 28px;
-             padding-bottom: 24px;
-        }
-     
-    }
-    .tableIng
-    {
-        font-size: 25px; 
-        font-weight: normal;
-        color: #453328;
-       
-    };
-    
-    td
-    {
-         hr 
-         {
-            color: #b5b5b5;
-            background-color:  #b5b5b5;
-            border: none;
-            width: 70%;
-            height: 2px;
-         }    
-        color: @elementsColor;
-        padding-bottom: 10px;
-        font-size: 26px;
-        font-weight: bold;
-        
-    }
-    #finalSum
-    {
-        font-size: 30px;
-        color: #453328;
-        text-align: right;
-        padding-right: 23px;
-    }
-    .exit
-    {
-       text-align: left;
-       padding-right: 23px;
-       padding-left: 34px;
-    }
-    
-  
-}
-
-#printButton
-{
-    font-size: 24px;
-    background-color: #65584f;
-    margin-bottom: 28px;
-
-}
-#printButton:hover
-{
-     background-color: #5c5048;
-     
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//Solomia
-
-
-
-
 .FormSpace{
      margin-right: 100px;
 }
@@ -649,12 +365,10 @@ overflow:hidden
  margin: auto;
      background-color: darkgrey;
 }
-/*
 .row{
     padding-left: 10%;
      padding-right: 10%;
 }
-*/
 .TextNameIngr{
     width: 100%;
     background-color: darkgrey;
