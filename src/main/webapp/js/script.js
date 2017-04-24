@@ -10,12 +10,8 @@ $(document).ready(function(){
         // var url ="html/page.html";
         // $(location).attr('href', url);
         $('body').load("html/page.html");
-             
+       
         });
  
-
-
 });
-
-
 

@@ -16,6 +16,7 @@ body,
 html {
   background-color: #cfced3;
   min-width: 1000px;
+  font-family: MyriadPro-Regular;
 }
 #upBlock {
   position: relative;
@@ -23,8 +24,9 @@ html {
   height: 480px;
   background-color: #3e3c4a;
   color: #d2c3c3;
-  padding-top: 210px;
+  padding-top: 220px;
   text-align: center;
+  font-family: MyriadPro-Bold;
 }
 #upBlock h1 {
   position: relative;
@@ -97,6 +99,7 @@ html {
 }
 #content .underTitle {
   color: #f76e5d;
+  font-family: MyriadPro-Regular;
 }
 #grid {
   position: relative;
@@ -127,7 +130,13 @@ html {
   margin: auto;
   background-color: #f76e5d;
   font-size: 14px;
+  font-family: MyriadPro-Regular;
   padding-top: 12px;
+}
+#lypa{
+padding:0px;
+border:0px;
+margin:0px;
 }
 footer {
   padding-bottom: 18px;
@@ -154,6 +163,7 @@ footer div {
   margin-left: 50px;
   margin-bottom: 25px;
   font-size: 14px;
+  font-family: MyriadPro-Regular;
 }
 .newPositionedContent {
   margin-top: -334px;
@@ -208,7 +218,6 @@ button {
   color: #d2c3c3;
   background-color: #f76e5d;
   font-weight: bold;
-  margin-bottom: 50px;
 }
 button:hover {
   background-color: #e5695a;
@@ -246,204 +255,6 @@ button:hover {
   #grid-dish .darkDish div {
     font-size: 80px;
   }
-}
-/*
-.FormSpace{
-     margin-right: 100px;
-}
-.OptionSpace{
-     margin-right:140px;
-}
-.text{
-    width:350px;
-}
-.form{
-    font-size:25px;
-}
-.table{
-    width:700px;
-     background-color: @elementsColor;
-     margin: auto;
-}
-.Category{
-     width:350px;
-    text-align: center;
-    overflow-y: scroll;
-        overflow-x: hidden;
-overflow:hidden
-}
-
-.option{
-    text-align: center;
-}
-.ChoosenIngr{
-    width:700px;
- margin: auto;
-     background-color: darkgrey;
-}
-.TextNameIngr{
-    background-color: darkgrey;
-}
-.TextMassIngr{
-    background-color: darkgrey;
-}
-.TextPrizeIngr{ 
-    width:101%;
-    background-color: darkgrey;
-}
-.NameOfIngr{
-    width:700px;
-  margin: auto;
-}
-#button{
-     width:214px;
-    height:80px;
-    margin: 10px;
-}
-.AdIngridians{
-  //  margin-left: 220px;
-    color:white;
-      margin-top: 20%;
-}
-.Back{
-    background-color:grey;
-    color:white;
-}
-.Ad{
-  //  margin-left: 220px;
-    color:white;
-    margin-bottom: 10%;
-}
-
-p{
-    font-family:monospace, sans-serif;
-    color:dimgrey;
-    font-weight:600;
-}
-
-#Ingridian{
-    width:700px;
-    margin-left:50px;
-
-}
-*/
-.formProceed {
-  position: relative;
-  width: 70%;
-  margin: auto;
-  font-size: 25px;
-  color: #3e3c4a;
-  padding-bottom: 80px;
-  padding-top: 20px;
-}
-.formProceed div {
-  text-align: left;
-}
-.formProceed .formTitle {
-  color: #f76e5d;
-  font-family: MyriadPro-Bold;
-  font-size: 30px;
-  margin-bottom: 10px;
-}
-.formProceed .myInput {
-  position: relative;
-  border: 2px solid #f76e5d;
-  text-align: center;
-  background-color: #e0dfe5;
-  width: 80%;
-}
-.formProceed .myInput:focus {
-  outline: none;
-}
-.formProceed .Back {
-  height: 50px;
-  width: 60%;
-  margin: 0;
-}
-.formProceed .Back:hover {
-  background-color: #717171;
-}
-.formProceed .send {
-  position: relative;
-  width: 100%;
-  height: 50px;
-  border: none;
-  font-size: 30px;
-  color: #d2c3c3;
-  background-color: #f76e5d;
-  font-weight: bold;
-}
-.formProceed .send:hover {
-  background-color: #e5695a;
-}
-.formProceed .formRow {
-  margin-bottom: 50px;
-}
-.formProceed td {
-  color: white;
-}
-.table-shadow {
-  width: 86%;
-  box-shadow: 6px 6px 1px 3px #b9babe;
-  margin: auto;
-  background-color: #efe4dd;
-  padding: 8px;
-  padding-bottom: 12px;
-  padding-top: 12px;
-}
-#resultTable {
-  width: 100%;
-  margin: auto;
-  color: #453328;
-}
-#resultTable caption,
-#resultTable th {
-  background-color: #efe4dd;
-  text-align: center;
-  font-size: 30px;
-  font-weight: bold;
-  color: #453328;
-}
-#resultTable .tableHead th {
-  font-size: 28px;
-  padding-bottom: 24px;
-}
-#resultTable .tableIng {
-  font-size: 25px;
-  font-weight: normal;
-  color: #453328;
-}
-#resultTable td {
-  color: #f76e5d;
-  padding-bottom: 10px;
-  font-size: 26px;
-  font-weight: bold;
-}
-#resultTable td hr {
-  color: #b5b5b5;
-  background-color: #b5b5b5;
-  border: none;
-  width: 70%;
-  height: 2px;
-}
-#resultTable #finalSum {
-  font-size: 30px;
-  color: #453328;
-  text-align: right;
-  padding-right: 23px;
-}
-#resultTable .exit {
-  text-align: left;
-  padding-right: 23px;
-  padding-left: 34px;
-}
-#printButton {
-  font-size: 24px;
-  background-color: #65584f;
-  margin-bottom: 28px;
-}
-#printButton:hover {
-  background-color: #5c5048;
 }
 .FormSpace {
   margin-right: 100px;
@@ -484,12 +295,18 @@ p{
   margin: auto;
   background-color: darkgrey;
 }
-/*
-.row{
-    padding-left: 10%;
-     padding-right: 10%;
+.row {
+  padding-left: 10%;
+  padding-right: 10%;
+    -webkit-columns: 100px 3; /* Chrome, Safari, Opera */
+    -moz-columns: 100px 3; /* Firefox */
+    columns: 400px 3;
 }
-*/
+
+.transpar {
+opacity:0;
+}
+
 .TextNameIngr {
   width: 100%;
   background-color: darkgrey;
@@ -511,9 +328,11 @@ p{
   margin: auto;
 }
 .NameOfDish {
-  width: 450px;
+  width: 80%;
   height: 40px;
+  border-right:0px;
   margin: auto;
+
 }
 #button {
   width: 250px;
@@ -525,6 +344,8 @@ p{
 .AdDish {
   color: white;
   height: 49px;
+  float: right;
+  margin-right: 10%;
 }
 .AdIngridians {
   color: white;
@@ -546,9 +367,26 @@ p {
 td {
   color: white;
 }
+/*search results */
 .NameOfRecepie {
-  width: 100%;
+  columns:3;
+  float:right;
   height: 40px;
+  margin-bottom:5%;
+  font-size: 25px;
+  border:0;
+  text-align:center;
   font: MyriadPro-Regular;
+  background-color:#e0dfe5;
   color: #f76e5d;
+}
+/*Кнопки внизу страници, функционал необязателен просто для вида*/
+.navigButton, .navigButton:hover,.navigButton:active {
+     background-color:#e0dfe5;
+     color:#949399;
+
+}
+.pageN,.pageN:hover,.pageN:active{
+    color:#5d5c61;
+    background-color:#e0dfe5;
 }
