@@ -160,7 +160,7 @@ footer div {
 }
 .newPositionedContent hr {
   border-color: #b5b5b5;
-  width: 70%;
+  width: 60%;
 }
 #grid-dish {
   position: relative;
@@ -214,9 +214,15 @@ button:hover {
   background-color: #e5695a;
 }
 #addDish {
-  width: 400px;
-  padding-bottom: 6px;
-  margin-bottom: 60px;
+  position: absolute;
+  top: 30px;
+  right: 130px;
+  height: 45px;
+  width: 170px;
+  font-size: 20px;
+  padding: 5px;
+  padding-top: 5px;
+  margin: 10px;
 }
 @media (max-width: 991px) {
   #imageBlock {
@@ -551,4 +557,45 @@ td {
   height: 40px;
   font: MyriadPro-Regular;
   color: #f76e5d;
+}
+
+.search_form_group
+{
+    margin-top: 20px;
+    width: 60%;
+}
+
+.search_input_group
+{
+    width: 100%;
+}
+
+.search_button
+{
+    background: none;
+    border: 1px solid #747475;
+    border-left: none;
+}
+
+.search_input
+{
+    background: none;
+    border: 1px solid #747475;
+    border-right: none;
+    border-radius: none;
+}
+
+
+.search_input:focus
+{
+    border-color: #747475;
+    box-shadow: none;
+}
+
+.search_icon
+{
+    text-align: right;
+    margin-top: 0;
+    color: #747475;
+    font-size: 20px;
 }

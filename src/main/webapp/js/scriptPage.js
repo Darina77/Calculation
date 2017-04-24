@@ -28,16 +28,16 @@ $(document).ready(function(){
     $(".dish").click(function(){
        
        $("#content").load('../html/reciepe.html', function(){ 
-             $("#addDish").click(function(){
-        //тут очищюється content, видаляються клітинки зі стравами...
-        $("#content").empty();
-        // Тут завантажиться форма для створення своєї страви, а саме  //productForm.html
-        // завантажиться в id="#content"
-         $("#content").load('../html/productForm.html', function(){ 
-             
-          });
+            $("#addDish").click(function(){
+            //тут очищюється content, видаляються клітинки зі стравами...
+            $("#content").empty();
+            // Тут завантажиться форма для створення своєї страви, а саме  //productForm.html
+            // завантажиться в id="#content"
+            $("#content").load('../html/productForm.html', function(){
+
+            });
         });
-          });
+       });
         
     });
     
