@@ -1,3 +1,4 @@
+/*
 $(document).ready(function(){
 //Тут відбуваються дії при натисканні кнопки додати свою страву на сторінці productForm
 $(".Ad").click(function(){
@@ -14,3 +15,5 @@ $(".Back").click(function(){
 });  
 
 });
+
+*/

@@ -28,19 +28,74 @@ $(document).ready(function(){
     $(".dish").click(function(){
        
        $("#content").load('../html/reciepe.html', function(){ 
-             $("#addDish").click(function(){
-        //тут очищюється content, видаляються клітинки зі стравами...
-        $("#content").empty();
-        // Тут завантажиться форма для створення своєї страви, а саме  //productForm.html
-        // завантажиться в id="#content"
-         $("#content").load('../html/productForm.html', function(){ 
-             
-          });
-        });
+             addLisenerToAddDish();
           });
         
     });
     
+    function addLisenerToAddDish()
+    {
+       addDish();
+    }
+        
+   
+    function addLisenerToAddIngr(){
+        $('#addIngr').click(function(e){
+             e.preventDefault();
+            var name = $('#enterName').val();
+            var brutto = $('#enterBrutto').val();
+            var netto = $('#enterNetto').val();
+            var price = $('#enterPrice').val();
+           
+            $.get("../html/elemIngr.html", function( my_var ) {
+                var node = $(my_var);     
+                node.find(".entname").text(name);
+                node.find(".brutto").text(brutto);
+                node.find(".netto").text(netto);
+                node.find(".entprice").text(price);
+                
+                node.attr('title', 'Клікніть, щоб видалити інгредієнт');
+                $('#cont').append(node);
+                 node.click(function(){
+                 node.remove();
+        
+                });
+                
+                 
+            });
+           
+           
+            
+            $('#enterBrutto').val('');
+            $('#enterNetto').val('');
+            $('#enterPrice').val('');
+            $('#enterName').val('');
+        });
+        
+        
+    }
+        
+   function addLisenerToBackInAddDish(){
+       $("#backInDish").click(function(e){
+            e.preventDefault();
+            $('#content').load("../html/reciepe.html", function(){
+                 addDish();
+            });
+           
+       });
+   }
+     function addDish()
+    {
+         $("#addDish").click(function(e){
+              e.preventDefault();
+              $("#content").empty();
+               $("#content").load('../html/productForm.html', function(){ 
+                   addLisenerToAddIngr();
+                   addLisenerToBackInAddDish();
+                   
+             });
+        });
+    }
     $(".dish").mouseenter(function() {
        $(this).find(".darkDish").show();
        var id = $(this).attr('id');
@@ -65,6 +120,7 @@ $(document).ready(function(){
         
 //натискаємо "Додати свою страву", id=#content
 //it's ajax: https://www.w3schools.com/jquery/jquery_ajax_load.asp
+        
     
    });
 

@@ -7,8 +7,6 @@ $(document).ready(function(){
     
     $('#begin').click(function(e){
          e.preventDefault();
-        // var url ="html/page.html";
-        // $(location).attr('href', url);
         $('body').load("html/page.html");
              
         });
