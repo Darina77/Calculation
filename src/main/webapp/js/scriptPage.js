@@ -1,4 +1,4 @@
-﻿/*
+/*
  Буде працювати з рештою
 */
 $(document).ready(function(){
@@ -13,7 +13,7 @@ $(document).ready(function(){
         var DISH_TEMPLATE = $(".dish")[0].outerHTML;
         for (var i=1; i<16; i++){
             var node = $(DISH_TEMPLATE);
-            node.find('img').attr('src', '/img/'+i+'.png');
+            node.find('img').attr('src', '/img/'+i+'.jpeg');
             node.attr('id', i);
             $('#innerGrid-dish').append(node);  
         }
