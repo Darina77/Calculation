@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    /*
     //here will be aded recepie when searchpage will be opened
      var MassyfRecepie=["Огірок","Бешбармак","Трісіні","Диявольські яйця","Фаршмак"];
    fillDishGrid();
@@ -32,5 +33,6 @@ function dof(){
     alert("f");
     
 }
+*/
    
 });

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,40 +22,54 @@
            </div>
      </header>
      <div id="content" class="newPositionedContent">
+         
          <h2 class="underTitle">Власна страва</h2>
-          <hr>
-         <form class="form">
-             <p> Назва страви
-      <pr class="FormSpace"></pr>
-                
-            <input type="text" placeholder=" Введіть назву страви" class="text" id="text"  required pattern="^[а-яА-Я\s]+$"><br>
-                  </p> 
+         <hr>
+         <form id="yourDish">
+             <div class="upperPartIn">
+             <label for="dishName">Назва страви</label> <input id="dishName" type="text" placeholder="Введіть назву вашої страви...">
+             <div>
+             <label class="centerLabel">Інгредієнти</label>
+             </div>
+            </div>
+             <div class="captionOfFormDish">
+                 <div>Назва</div>
+                 <div class="masa">Брутто</div>
+                 <div class="masa">Нетто</div>
+                 <div>Ціна</div>
+             </div>
              
-             
-             <br>
-             <p>Інгрідієнти</p>
-             
-             <table class="table">
-                 <td id="012" >Назва</td>
-                 <td id="013" data-toggle="tooltip" data-placement="top" title="Введіть вагу в грамах!">Брутто(гр)</td>
-                 <td id="014"data-toggle="tooltip" data-placement="top" title="Введіть вагу в грамах!">Нетто(гр)</td>
-                 <td id="015"data-toggle="tooltip" data-placement="top" title="Введіть ціну в грн!">Ціна</td>
-             </table>
-              
-             <!--Here will be aded product name, mass and prize-->
-           <!--Ось тут ці інгредієнта мають додатись код js в файлі FormJS-->
-             
-             <table class="ChoosenIngr" id="Choosen">
-               
-             </table>
-             <p> <input type="text" placeholder="  Почніть вводити назву" pattern="^[а-яА-Я\s]+$" required class="NameOfIngr"  id="NameOfIngrst"><br>  </p>
-    
-              <button class="Back" id="button">Назад</button>  
-             
-             <button class="AdIngridians" id="button" >Додати інгредієнт</button>
-             <button class="Ad" id="button">Додати</button>
-            
+             <div class="dishContent" id="cont">
+                 <div class="elemIngrid">
+                     <div>Сир</div>
+                    <div class="masa">1000</div>
+                    <div class="masa">500</div>
+                    <div>5</div>
+                 </div>
+                 <div class="elemIngrid">
+                     <div>Не сир</div>
+                    <div class="masa">10</div>
+                    <div class="masa">50</div>
+                    <div>9</div>
+                 </div>
+             </div>
+             <div class="allInfo">
+                 <input class="infoInput" type="text" id="enterName" placeholder="Назва...">
+                 <input class="infoInput massInput" type="text" id="enterBrutto" placeholder="Брутто...">
+                 <input class="infoInput massInput" type="text" id="enterNetto" placeholder="Нетто...">
+                 <input class="infoInput" type="text" id="enterPrice" placeholder="Ціна...">
+             </div>
+             <div id="addIngr"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></div>
+
          </form>
+         <div class="buttonsBlock">
+         <div class="oneButtonDiv">
+         <button id="backInDish">Назад</button>
+         </div>
+         <div class="oneButtonDiv">
+         <button id="nextInDish">Додати</button>
+         </div>
+         </div>
      </div>
     <footer>
           <div id="lowerLineDiv">Copyright (c) KK. All rights reserved.</div>

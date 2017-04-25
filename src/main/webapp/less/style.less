@@ -10,6 +10,8 @@
 @minLengthFooter: 80%;
 @marginBlock: (100%- @lengthBlock)/2;
 @headerHeight: 480px;
+@font: MyriadPro-Regular;
+@boldFont: MyriadPro-Bold;
 @font-face {
     font-family: MyriadPro-Bold; /* Имя шрифта */
     src: url('../fonts/MyriadPro-Bold.otf'); /* Путь к файлу со шрифтом */
@@ -22,7 +24,7 @@ body, html
 {
   background-color: @bodycolor;
   min-width: @minWidth;
-  font-family:  MyriadPro-Regular;
+ // font-family:  @font;
 }
 #upBlock
 {
@@ -31,9 +33,9 @@ body, html
      height: @headerHeight;
      background-color: @upBlockColor;
      color: @textColor;
-     padding-top: 220px;
+     padding-top: 210px;
      text-align: center;
-     font-family: MyriadPro-Bold;
+ 
      h1
      {
        
@@ -42,7 +44,7 @@ body, html
         font-weight: bold;
         color: @textColor;
         margin-bottom: 25px;
-        font-family: MyriadPro-Bold;
+        font-family: @boldFont;
      }
     .orange-white-title 
     {
@@ -73,7 +75,7 @@ body, html
      background-repeat: no-repeat;
      background-size: 100%;
      background-position: 0px 100%;
-    
+    // padding-bottom: 80px;
 }
 #lineDiv
 {
@@ -94,7 +96,7 @@ body, html
     z-index: 800;
     font-size: 23px;
     width: 500px;
-    font-family: MyriadPro-Regular;
+  font-family: MyriadPro-Regular;
 }
 #content
 {
@@ -111,12 +113,12 @@ body, html
     h2 {
         font-weight: bold;
         color: @upBlockColor;
-        font-family: MyriadPro-Bold;
+        font-family: @boldFont;
     }
     .underTitle
     {
         color: @elementsColor;
-        font-family: MyriadPro-Regular;
+        //font-family: MyriadPro-Regular;
     }
    
 }
@@ -143,7 +145,7 @@ body, html
         color: @elementsColor;
         margin-top: -2px;
         margin-left: 50px;
-        font-family: MyriadPro-Bold;
+        font-family: @boldFont;
     }
     
 }
@@ -155,7 +157,7 @@ body, html
     margin: auto;
     background-color:  @elementsColor;
     font-size: 14px;
-    font-family: MyriadPro-Regular;
+   // font-family: MyriadPro-Regular;
     padding-top: 12px;
     
 }
@@ -189,15 +191,17 @@ footer
     margin-left: 50px;
     margin-bottom: 25px;
     font-size: 14px;
-    font-family: MyriadPro-Regular;
+  //  font-family: MyriadPro-Regular;
 }
 .newPositionedContent 
 {
     margin-top: -@headerHeight*0.8+50px;
     hr 
     {
-       border-color: #b5b5b5;
+     
+       border-color:  #b5b5b5;
        width: 70%;
+      
     }
 }
 #grid-dish
@@ -234,7 +238,7 @@ footer
           
           color: @textColor;
           font-size: 26px;
-          font-family: MyriadPro-Bold;
+          font-family: @boldFont;
           margin-left: 15px;
           margin-right: 15px;
         }
@@ -248,7 +252,10 @@ footer
     }
      
 }
-button
+
+
+button 
+
 {
     position: relative;
     width: 250px;
@@ -260,18 +267,21 @@ button
     color: @textColor;
     background-color: @elementsColor;
     font-weight: bold;
+    margin-bottom: 50px;
       
 }
 button:hover
 {
     background-color: #e5695a; 
 }
+
 #addDish
 {
     width: 400px;
     padding-bottom: 6px;
     margin-bottom: 60px;
 }
+
 
 @media(max-width: 991px)
 {
@@ -324,114 +334,350 @@ button:hover
         }
       }
     }
-}
-.FormSpace{
-     margin-right: 100px;
-}
-.OptionSpace{
-     margin-right:140px;
-}
-.text{
-    width:350px;
-}
-.form{
-    font-size:25px;
-}
-.table{
-    width:85%;
-     background-color: @elementsColor;
-     margin: auto;
-}
-.tableS{
-    width:700px;
-    color: @elementsColor;
-     margin: auto;
-     font-family:monospace, sans-serif;
-    font-weight:800;
-}
-.Category{
-     width:350px;
-    text-align: center;
-    overflow-y: scroll;
-        overflow-x: hidden;
-overflow:hidden
+
 }
 
-.option{
-    text-align: center;
+
+
+.formProceed
+{
+    position: relative;
+    width: 70%;
+    margin: auto;
+    font-size: 25px;
+    color: @upBlockColor;
+    div
+    {
+        text-align: left;
+    }
+    .formTitle
+    {
+        color: @elementsColor;
+        font-family: @boldFont;
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    
+    .myInput
+    {
+        position: relative;
+        border: 2px solid @elementsColor;
+        text-align: center;
+        background-color: @lowerBlockColor; 
+        width: 80%;
+    }
+    .myInput:focus 
+    {
+
+         outline: none;
+    }
+    .send
+    {
+        position: relative;
+        width: 100%;
+        height: 50px;
+        border: none; 
+        font-size: 30px;
+        color: @textColor;
+        background-color: @elementsColor;
+        font-weight: bold;
+    }
+    .send:hover
+    {
+         background-color: #e5695a; 
+    }
+    .formRow
+    {
+        margin-bottom: 50px; 
+    }
+    
+    padding-bottom: 80px;
+    padding-top: 20px;
+    
+    
 }
-.ChoosenIngr{
-  width:85%;
- margin: auto;
-     background-color: darkgrey;
+.back 
+{
+      height: 50px;  
+      width: 60%;
+      margin: 0;
+      color: @textColor;
+      background-color: #717171;
 }
-.row{
-    padding-left: 10%;
-     padding-right: 10%;
+.back:hover
+{
+       background-color:  #656565;
 }
-.TextNameIngr{
-    width: 100%;
-    background-color: darkgrey;
+
+.table-shadow
+{
+   width: 86%; 
+   box-shadow: 6px 6px 1px 3px #b9babe;
+   margin: auto;
+   background-color: #efe4dd;
+   padding: 8px;
+   padding-bottom: 12px;
+   padding-top: 12px;
 }
-.TextMassIngr{
-    width: 100%;
-    background-color: darkgrey;
-}
-.TextMassBruttoIngr{
-    width: 100%;
-    background-color: darkgrey;
-}
-.TextPrizeIngr{ 
-    width:100%;
-    background-color: darkgrey;
-}
-.NameOfIngr{
-    width:85%;
+#resultTable
+{
+  
+   width: 100%; 
   margin: auto;
-}
-.NameOfDish{
-    width:450px;
-    height: 40px;
-  margin: auto;
-}
-#button{
-     width:250px;
-    height:80px;
-    margin: 10px;
-    font-family:MyriadPro-Regular;
-    font-weight: 200;
-}
-.AdDish{
-    color:white;
-    height: 49px;
-}
-.AdIngridians{
-    color:white;
-      margin-top: 20%;
-     font-weight: 100;
+  color: #453328;
+   caption, th
+    {
+         background-color: #efe4dd;
+         text-align: center;
+         font-size: 30px;
+         font-weight: bold;
+         color: #453328;
+    }
+    
+    
+    .tableHead
+    {
+         
+        th
+        {
+             font-size: 28px;
+             padding-bottom: 24px;
+        }
+     
+    }
+    .tableIng
+    {
+        font-size: 25px; 
+        font-weight: normal;
+        color: #453328;
+       
+    };
+    
+    td
+    {
+         hr 
+         {
+            color: #b5b5b5;
+            background-color:  #b5b5b5;
+            border: none;
+            width: 70%;
+            height: 2px;
+         }    
+        color: @elementsColor;
+        padding-bottom: 10px;
+        font-size: 26px;
+        font-weight: bold;
+        
+    }
+    #finalSum
+    {
+        font-size: 30px;
+        color: #453328;
+        text-align: right;
+        padding-right: 23px;
+    }
+    .exit
+    {
+       text-align: left;
+       padding-right: 23px;
+       padding-left: 34px;
+    }
+    
+  
 }
 
-.Back{
-    background-color:grey;
-    color:white;
+#printButton
+{
+    font-size: 24px;
+    background-color: #65584f;
+    margin-bottom: 28px;
+
 }
-.Ad{
-  //  margin-left: 220px;
-    color:white;
-    margin-bottom: 10%;
+#printButton:hover
+{
+     background-color: #5c5048;
+     
 }
 
-p{
-    font-family:MyriadPro-Regular;
-    color:dimgrey;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#yourDish
+{
+    padding-top: 60px;
+    width: 90%;
+    margin: auto;
+    .upperPart{
+       text-align: center;
+       position: relative;
+        width: 90%;
+    }
+    @inputBackgroundColor: rgb(227, 227, 227);
+    label 
+    {
+      // margin-right: 14%;
+       font: MyriadPro-Regular; 
+       font-size: 25px;
+       color:  #717171;
+    }
+    #dishName
+    {
+  
+        margin-left: 5%;
+        outline: none;
+        width: 55%;
+        text-align: center; 
+        font-weight: bolder;
+        font-size: 20px;
+        background-color: @inputBackgroundColor;
+        border: 1px solid #a7a5a5;
+        height: 45px;
+    }
+   ::placeholder
+    {
+         color:  #919191;
+    }
+    .centerLabel
+    {
+        margin: auto;
+        margin-top: 60px;
+        margin-bottom: 18px;
+    }
+    
+    .captionOfFormDish, .elemIngrid
+    {
+        box-sizing: border-box;
+        border-top: none;
+        box-shadow: inset 0px 0px 10px 10px @elementsColor;
+        background-color: #fc8576;
+        height: 50px;
+        font-size: 25px;
+        div {
+           
+            color: @lowerBlockColor;
+            box-sizing: border-box;
+            display: inline-block;
+            width: 24%;
+            height: inherit;
+            position: inherit;
+            margin: 0;
+            font-weight: bold;
+            padding-top: 5px;
+        }
+        .masa
+        {
+           font-size: 18px;  
+           padding-top: 12px;
+         
+        }     
+    }
+     .allInfo
+    {
+        border: 1px solid #a7a5a5;
+        border-top: none;
+        background-color: @inputBackgroundColor;
+        height: 40px;   
+        .infoInput
+        {
+           outline: none;
+           position: relative;
+         
+           background-color: inherit;
+           width: 24.5%;
+           border: none;
+           text-align: center;
+           font-size: 18px;
+            height: 35px;
+        }
+        
+        .massInput
+        {
+             font-size: 14px;
+        }
+        
+    }
+    
+    .dishContent
+    {
+        height: auto;
+        border-top: none;
+        position: relative;
+        border: 1px solid gray;
+    }
+    .elemIngrid
+    {
+        background-color: #eaaa97;
+        box-shadow: inset 0px 0px 10px 10px #f48b6c;
+        border-bottom: 1px solid @elementsColor;
+       // height: auto;
+        min-height: 50px;
+        div 
+        {
+          //height: auto;
+          min-height: 50px;
+        }
+    }
+    .elemIngrid:hover
+    {
+        background-color: rgb(232, 99, 59);
+        box-shadow: inset 0px 0px 10px 10px  rgb(191, 92, 55);
+        div
+        {
+         color: rgba(240, 248, 255, 0.23);
+        }
+    }
+    #addIngr{
+        background-color: #afaeae;
+        height: 40px;
+        fon-size: 10px;
+        padding-top: 2px;
+        .glyphicon {
+             font-size: 20px;
+             color: aliceblue;
+           }
+    }
+    
 }
-td{
-    color:white;
+.buttonsBlock
+{
+   position: relative;  
 }
-.NameOfRecepie{
-    width:100%;
-    height:40px;
-     font: MyriadPro-Regular;
-    color: @elementsColor;
-   
+ #backInDish
+{
+        width: 70%;
+        height: 50px;
+        background-color: #717171;
+        margin-right: 30%;
+      
+}
+#backInDish:hover
+{
+       background-color:  #656565;
+}
+#nextInDish 
+{
+      width: 70%;
+      height: 50px;
+     margin-left: 30%;
+}
+.oneButtonDiv
+{
+  width: 45%;
+  display: inline-block;
 }

@@ -160,7 +160,7 @@ footer div {
 }
 .newPositionedContent hr {
   border-color: #b5b5b5;
-  width: 60%;
+  width: 70%;
 }
 #grid-dish {
   position: relative;
@@ -245,15 +245,9 @@ button:hover {
   background-color: #e5695a;
 }
 #addDish {
-  position: absolute;
-  top: 30px;
-  right: 130px;
-  height: 45px;
-  width: 170px;
-  font-size: 20px;
-  padding: 5px;
-  padding-top: 5px;
-  margin: 10px;
+  width: 400px;
+  padding-bottom: 6px;
+  margin-bottom: 60px;
 }
 @media (max-width: 991px) {
   #imageBlock {
@@ -284,86 +278,6 @@ button:hover {
     font-size: 80px;
   }
 }
-/*
-.FormSpace{
-     margin-right: 100px;
-}
-.OptionSpace{
-     margin-right:140px;
-}
-.text{
-    width:350px;
-}
-.form{
-    font-size:25px;
-}
-.table{
-    width:700px;
-     background-color: @elementsColor;
-     margin: auto;
-}
-.Category{
-     width:350px;
-    text-align: center;
-    overflow-y: scroll;
-        overflow-x: hidden;
-overflow:hidden
-}
-
-.option{
-    text-align: center;
-}
-.ChoosenIngr{
-    width:700px;
- margin: auto;
-     background-color: darkgrey;
-}
-.TextNameIngr{
-    background-color: darkgrey;
-}
-.TextMassIngr{
-    background-color: darkgrey;
-}
-.TextPrizeIngr{ 
-    width:101%;
-    background-color: darkgrey;
-}
-.NameOfIngr{
-    width:700px;
-  margin: auto;
-}
-#button{
-     width:214px;
-    height:80px;
-    margin: 10px;
-}
-.AdIngridians{
-  //  margin-left: 220px;
-    color:white;
-      margin-top: 20%;
-}
-.Back{
-    background-color:grey;
-    color:white;
-}
-.Ad{
-  //  margin-left: 220px;
-    color:white;
-    margin-bottom: 10%;
-}
-
-p{
-    font-family:monospace, sans-serif;
-    color:dimgrey;
-    font-weight:600;
-}
-
-#Ingridian{
-    width:700px;
-    margin-left:50px;
-
-}
-*/
 .formProceed {
   position: relative;
   width: 70%;
@@ -392,14 +306,6 @@ p{
 .formProceed .myInput:focus {
   outline: none;
 }
-.formProceed .Back {
-  height: 50px;
-  width: 60%;
-  margin: 0;
-}
-.formProceed .Back:hover {
-  background-color: #717171;
-}
 .formProceed .send {
   position: relative;
   width: 100%;
@@ -416,8 +322,15 @@ p{
 .formProceed .formRow {
   margin-bottom: 50px;
 }
-.formProceed td {
-  color: white;
+.back {
+  height: 50px;
+  width: 60%;
+  margin: 0;
+  color: #d2c3c3;
+  background-color: #717171;
+}
+.back:hover {
+  background-color: #656565;
 }
 .table-shadow {
   width: 86%;
@@ -482,112 +395,125 @@ p{
 #printButton:hover {
   background-color: #5c5048;
 }
-.FormSpace {
-  margin-right: 100px;
+#yourDish {
+  padding-top: 60px;
+  width: 90%;
+  margin: auto;
 }
-.OptionSpace {
-  margin-right: 140px;
+#yourDish .upperPart {
+  text-align: center;
+  position: relative;
+  width: 90%;
 }
-.text {
-  width: 350px;
+#yourDish label {
+  font: MyriadPro-Regular;
+  font-size: 25px;
+  color: #717171;
 }
-.form {
+#yourDish #dishName {
+  margin-left: 5%;
+  outline: none;
+  width: 55%;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 20px;
+  background-color: #e3e3e3;
+  border: 1px solid #a7a5a5;
+  height: 45px;
+}
+#yourDish ::-webkit-input-placeholder {
+  color: #919191;
+}
+#yourDish ::-moz-placeholder {
+  color: #919191;
+}
+#yourDish :-ms-input-placeholder {
+  color: #919191;
+}
+#yourDish ::placeholder {
+  color: #919191;
+}
+#yourDish .centerLabel {
+  margin: auto;
+  margin-top: 60px;
+  margin-bottom: 18px;
+}
+#yourDish .captionOfFormDish,
+#yourDish .elemIngrid {
+  box-sizing: border-box;
+  border-top: none;
+  box-shadow: inset 0px 0px 10px 10px #f76e5d;
+  background-color: #fc8576;
+  height: 50px;
   font-size: 25px;
 }
-.table {
-  width: 85%;
-  background-color: #f76e5d;
-  margin: auto;
+#yourDish .captionOfFormDish div,
+#yourDish .elemIngrid div {
+  color: #e0dfe5;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 24%;
+  height: inherit;
+  position: inherit;
+  margin: 0;
+  font-weight: bold;
+  padding-top: 5px;
 }
-.tableS {
-  width: 700px;
-  color: #f76e5d;
-  margin: auto;
-  font-family: monospace, sans-serif;
-  font-weight: 800;
+#yourDish .captionOfFormDish .masa,
+#yourDish .elemIngrid .masa {
+  font-size: 18px;
+  padding-top: 12px;
 }
-.Category {
-  width: 350px;
-  text-align: center;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  overflow: hidden;
-}
-.option {
-  text-align: center;
-}
-.ChoosenIngr {
-  width: 85%;
-  margin: auto;
-  background-color: darkgrey;
-}
-/*
-.row{
-    padding-left: 10%;
-     padding-right: 10%;
-}
-*/
-.TextNameIngr {
-  width: 100%;
-  background-color: darkgrey;
-}
-.TextMassIngr {
-  width: 100%;
-  background-color: darkgrey;
-}
-.TextMassBruttoIngr {
-  width: 100%;
-  background-color: darkgrey;
-}
-.TextPrizeIngr {
-  width: 100%;
-  background-color: darkgrey;
-}
-.NameOfIngr {
-  width: 85%;
-  margin: auto;
-}
-.NameOfDish {
-  width: 450px;
+#yourDish .allInfo {
+  border: 1px solid #a7a5a5;
+  border-top: none;
+  background-color: #e3e3e3;
   height: 40px;
-  margin: auto;
 }
-#button {
-  width: 250px;
-  height: 80px;
-  margin: 10px;
-  font-family: MyriadPro-Regular;
-  font-weight: 200;
+#yourDish .allInfo .infoInput {
+  outline: none;
+  position: relative;
+  background-color: inherit;
+  width: 24.5%;
+  border: none;
+  text-align: center;
+  font-size: 18px;
+  height: 35px;
 }
-.AdDish {
-  color: white;
-  height: 49px;
+#yourDish .allInfo .massInput {
+  font-size: 14px;
 }
-.AdIngridians {
-  color: white;
-  margin-top: 20%;
-  font-weight: 100;
+#yourDish .dishContent {
+  height: auto;
+  border-top: none;
+  position: relative;
+  border: 1px solid gray;
 }
-.Back {
-  background-color: grey;
-  color: white;
+#yourDish .elemIngrid {
+  background-color: #eaaa97;
+  box-shadow: inset 0px 0px 10px 10px #f48b6c;
+  border-bottom: 1px solid #f76e5d;
+  min-height: 50px;
 }
-.Ad {
-  color: white;
-  margin-bottom: 10%;
+#yourDish .elemIngrid div {
+  min-height: 50px;
 }
-p {
-  font-family: MyriadPro-Regular;
-  color: dimgrey;
+#yourDish .elemIngrid:hover {
+  background-color: #e8633b;
+  box-shadow: inset 0px 0px 10px 10px #bf5c37;
 }
-td {
-  color: white;
+#yourDish .elemIngrid:hover div {
+  color: rgba(240, 248, 255, 0.23);
 }
-.NameOfRecepie {
-  width: 100%;
+#yourDish #addIngr {
+  background-color: #afaeae;
   height: 40px;
-  font: MyriadPro-Regular;
-  color: #f76e5d;
+  fon-size: 10px;
+  padding-top: 2px;
+}
+#yourDish #addIngr .glyphicon {
+  font-size: 20px;
+  color: aliceblue;
 }
 
 
@@ -596,12 +522,29 @@ td {
 {
     margin-top: 20px;
     width: 60%;
+=======
+.buttonsBlock {
+  position: relative;
+}
+#backInDish {
+  width: 70%;
+  height: 50px;
+  background-color: #717171;
+  margin-right: 30%;
+}
+#backInDish:hover {
+  background-color: #656565;
+}
+#nextInDish {
+  width: 70%;
+  height: 50px;
+  margin-left: 30%;
+}
+.oneButtonDiv {
+  width: 45%;
+  display: inline-block;
 }
 
-.search_input_group
-{
-    width: 100%;
-}
 
 .search_button
 {
