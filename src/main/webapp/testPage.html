@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Calculation</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="shortcut icon" href="img/favicon.png" type="image/png">
+</head>
+
+<body>
+    
+     <header id="upBlock">
+       
+            <div class="orange-white-title"> <h1>КAЛЬКУЛЯЦІЯ СТРАВ</h1>
+           </div>
+     </header>
+     <div id="content" class="newPositionedContent">
+         
+         <h2 class="underTitle">Власна страва</h2>
+         <hr>
+         <form id="yourDish">
+             <div class="upperPartIn">
+             <label for="dishName">Назва страви</label> <input id="dishName" type="text" placeholder="Введіть назву вашої страви...">
+             <div>
+             <label class="centerLabel">Інгредієнти</label>
+             </div>
+            </div>
+             <div class="captionOfFormDish">
+                 <div>Назва</div>
+                 <div class="masa">Брутто</div>
+                 <div class="masa">Нетто</div>
+                 <div>Ціна</div>
+             </div>
+             
+             <div class="dishContent" id="cont">
+                 <div class="elemIngrid">
+                     <div>Сир</div>
+                    <div class="masa">1000</div>
+                    <div class="masa">500</div>
+                    <div>5</div>
+                 </div>
+                 <div class="elemIngrid">
+                     <div>Не сир</div>
+                    <div class="masa">10</div>
+                    <div class="masa">50</div>
+                    <div>9</div>
+                 </div>
+             </div>
+             <div class="allInfo">
+                 <input class="infoInput" type="text" id="enterName" placeholder="Назва...">
+                 <input class="infoInput massInput" type="text" id="enterBrutto" placeholder="Брутто...">
+                 <input class="infoInput massInput" type="text" id="enterNetto" placeholder="Нетто...">
+                 <input class="infoInput" type="text" id="enterPrice" placeholder="Ціна...">
+             </div>
+             <div id="addIngr"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></div>
+
+         </form>
+         <div class="buttonsBlock">
+         <div class="oneButtonDiv">
+         <button id="backInDish">Назад</button>
+         </div>
+         <div class="oneButtonDiv">
+         <button id="nextInDish">Додати</button>
+         </div>
+         </div>
+     </div>
+    <footer>
+          <div id="lowerLineDiv">Copyright (c) KK. All rights reserved.</div>
+    </footer>
+   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+     <script type="text/javascript" src="js/FormJS.js"></script>
+    </body>
+ 
+</html>

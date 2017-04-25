@@ -72,7 +72,6 @@ public class CalculationApi {
         } else {
             result.update(standardPortionSize, type, productForms);
         }
-
         ofy().save().entity(result).now();
 
         return result;
