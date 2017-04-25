@@ -1,18 +1,19 @@
 <!--Тут міститься контент другої сторінки, набір страв-->
-<h2 class="underTitle">Оберіть вид страви</h2>
+    <div ng-controller = "loadCategories">
+        <h2 class="underTitle">Оберіть вид страви</h2>
           <hr>
           <div id="grid-dish">
-               <div class="row" id="innerGrid-dish">
-                   <div class="dish col col-xs-12 col-sm-6 col-lg-3" id="0">
-                     <div class="space">
-                       <img src="/img/0.jpeg"/>
-                        <div class="darkDish">
-                            <div class="center-block"></div>
+               <div class="row" id="innerGrid-dish" >
+                   <div class="dish col col-xs-12 col-sm-6 col-lg-3"  ng-repeat="content in contents" id={{content.id}}>
+                       <div class="space">
+                           <img src= {{content.picture}}>
+                           <div class="darkDish" >
+                               <div class="center-block">
+                                   <a href="#/recipe" ng-click="saveType()">{{content.name}}</a>
+                               </div>
+                           </div>
                        </div>
-                     </div>  
                    </div>
-                   
                </div>
           </div>
-<button id="addDish">Додати свою страву</button>
-    
+    </div>

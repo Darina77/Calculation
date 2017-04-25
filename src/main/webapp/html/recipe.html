@@ -1,7 +1,8 @@
-<h2 class="underTitle">Холодні закуски</h2>
+<div ng-controller = "showRecipesCtrl">
+    <div ng-controllers="loadCategories"> <h2 class="underTitle">{{savedType}}</h2> </div>
 <hr>
 <button id="addDish">СВІЙ РЕЦЕПТ</button>
-<form class="form-inline">
+<!--<form class="form-inline">
     <div class="form-group search_form_group">
         <div class="input-group search_input_group">
             <input type="text" class="form-control search_input" placeholder="ПОЧНІТЬ ВВОДИТИ ЗАПИТ">
@@ -10,9 +11,12 @@
             </a>
         </div>
     </div>
-</form>
-<div class="all_search_results">
+</form>-->
+<div class="all_results">
     <div class="row">
-        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 search_result"></div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 result">
+
+        </div>
     </div>
+</div>
 </div>

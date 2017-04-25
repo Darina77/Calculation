@@ -30,7 +30,7 @@ public class RecipeForm {
 
     public static enum RecipeType {
        COLD,
-       AGRIPOULTY_RABBIT_BIRD_DYCHI,
+       POULTY_RABBIT,
        SAUCES,
        SOUPS,
        FISH_SEAFOOD,
