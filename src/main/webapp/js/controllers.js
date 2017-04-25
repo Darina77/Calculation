@@ -7,7 +7,7 @@ calculationApp.controllers = angular.module('calculationControllers', ['ui.boots
 
 calculationApp.controllers.controller('loadCategories', function ($scope, $log, oauth2Provider, HTTP_ERRORS)
 {
-    $scope.recipes = [];
+    /*$scope.recipes = [];
     $scope.getRecipesByType = function(type){
          $scope.enumType = $scope.convertType(type);
         $scope.loading = true;
@@ -51,8 +51,8 @@ calculationApp.controllers.controller('loadCategories', function ($scope, $log, 
                     }
 
                   };
-              }
-    }
+              };
+    };*/
 
     $scope.allTypes = [ {enumValue: 'COLD', displayName: 'Холодні закуски'},
                             {enumValue: 'POULTY_RABBIT', displayName: 'Страви з сільсько-господарської птиці, пернатої дичі та кролика'},

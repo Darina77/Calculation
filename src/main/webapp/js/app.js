@@ -10,7 +10,7 @@ var app = angular.module('calculationApp',
                     controller: 'CalculateCtrl'
                 }).
                 when('/create', {
-                    templateUrl: '/html/form.html',
+                    templateUrl: '/html/productForm.html',
                     controller: 'CreateRecipeCtrl'
                 }).
                 when('/recipe', {

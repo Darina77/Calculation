@@ -160,7 +160,7 @@ footer div {
 }
 .newPositionedContent hr {
   border-color: #b5b5b5;
-  width: 70%;
+  width: 60%;
 }
 #grid-dish {
   position: relative;
@@ -245,9 +245,15 @@ button:hover {
   background-color: #e5695a;
 }
 #addDish {
-  width: 400px;
-  padding-bottom: 6px;
-  margin-bottom: 60px;
+    position: absolute;
+    top: 30px;
+    right: 130px;
+    height: 45px;
+    width: 170px;
+    font-size: 20px;
+    padding: 5px;
+    padding-top: 5px;
+    margin: 10px;
 }
 @media (max-width: 991px) {
   #imageBlock {
@@ -522,7 +528,7 @@ button:hover {
 {
     margin-top: 20px;
     width: 60%;
-=======
+}
 .buttonsBlock {
   position: relative;
 }
