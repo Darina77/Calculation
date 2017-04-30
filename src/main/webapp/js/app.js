@@ -2,10 +2,10 @@
 
 var app = angular.module('calculationApp',
     ['calculationControllers', 'ngRoute', 'ui.bootstrap']).
-    config(['$routeProvider',
-        function ($routeProvider) {
+    config(['$routeProvider', '$locationProvider',
+        function ($routeProvider, $locationProvider) {
             $routeProvider.
-                when('/calculation', {
+                when('/result', {
                     templateUrl: '/html/calculation.html',
                     controller: 'CalculateCtrl'
                 }).
@@ -28,6 +28,8 @@ var app = angular.module('calculationApp',
                 otherwise({
                     redirectTo: '/category'
                 });
+
+                $locationProvider.html5Mode(true);
         }]);
 
     app.filter('startFrom', function () {

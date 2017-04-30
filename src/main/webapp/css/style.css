@@ -448,7 +448,6 @@ button:hover {
 #yourDish .elemIngrid {
   box-sizing: border-box;
   border-top: none;
-  box-shadow: inset 0px 0px 10px 10px #f76e5d;
   background-color: #fc8576;
   height: 50px;
   font-size: 25px;
