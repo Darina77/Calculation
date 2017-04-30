@@ -245,9 +245,6 @@ button:hover {
   background-color: #e5695a;
 }
 #addDish {
-    position: absolute;
-    top: 30px;
-    right: 130px;
     height: 45px;
     width: 170px;
     font-size: 20px;
@@ -551,6 +548,17 @@ button:hover {
 }
 
 
+.search_form_group
+{
+    margin-top: 20px;
+    width: 60%;
+}
+
+.search_input_group
+{
+    width: 100%;
+}
+
 .search_button
 {
     background: none;
@@ -607,3 +615,14 @@ button:hover {
    color: #d2c3c3;
 }
 
+
+.top_recipe_area
+{
+   width: 70%;
+   margin: auto;
+}
+
+.recipe_name
+{
+    text-align: right;
+}

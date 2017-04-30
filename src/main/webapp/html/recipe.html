@@ -1,9 +1,15 @@
 
 <div ng-controller = "showRecipesCtrl">
-   <h2 class="underTitle" id="i_have_cool_name">Холодні закуски</h2>
-<hr>
-<a class="btn my_butt search_button"  id="addDish" href="#/create">СВІЙ РЕЦЕПТ</a>
-<!--<form class="form-inline">
+  <div class="row top_recipe_area">
+    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 recipe_name">
+      <h2 class="underTitle" id="i_have_cool_name">{{recipeCategory.displayName}}</h2>
+    </div>
+      <div  class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+            <a class="btn my_butt search_button"  id="addDish" href="#/create">СВІЙ РЕЦЕПТ</a>
+      </div>
+      </div>
+    <hr>
+<form class="form-inline">
     <div class="form-group search_form_group">
         <div class="input-group search_input_group">
             <input type="text" class="form-control search_input" placeholder="ПОЧНІТЬ ВВОДИТИ ЗАПИТ">
@@ -12,7 +18,7 @@
             </a>
         </div>
     </div>
-</form>-->
+</form>
 <div class="all_results">
     <div class="row">
         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 result">

@@ -6,10 +6,12 @@
                <div class="row" id="innerGrid-dish" >
                    <div class="dish col col-xs-12 col-sm-6 col-lg-3"  ng-repeat="content in contents" id={{content.id}}>
                        <div class="space">
-                           <img src= {{content.picture}}>
-                           <div class="darkDish" >
+                           <img ng-src= "{{content.picture}}">
+                           <div class="darkDish">
                                <div class="center-block">
-                                   <a id="i_save_my_text" href="#/recipe">{{content.name}}</a>
+                                   <a id="i_save_my_text" href="#/recipe" ng-click="saveIndex($index)">
+                                       {{content.name.displayName}}
+                                   </a>
                                </div>
                            </div>
                        </div>

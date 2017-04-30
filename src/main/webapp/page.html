@@ -17,10 +17,6 @@
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.js"></script>
     <script type="text/javascript">
-        /**
-         * Initializes the Google API JavaScript client. Bootstrap the angular module after loading the Google libraries
-         * so that Google JavaScript library ready in the angular modules.
-         */
         function init() {
             gapi.client.load('calculation', 'v1', null, '//' + window.location.host + '/_ah/api');
             gapi.client.load('oauth2', 'v2', function () {
@@ -29,7 +25,7 @@
         };
     </script>
     <script src="//apis.google.com/js/client:plusone.js?onload=init"></script>
-    <base href="/calculate">
+    <base href="/calculate/">
 
 </head>
 

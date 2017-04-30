@@ -3,7 +3,7 @@
 var calculationApp = calculationApp || {};
 calculationApp.controllers = angular.module('calculationControllers', ['ui.bootstrap']);
 var types = [ {enumValue: 'COLD', displayName: 'Холодні закуски'},
-                                        {enumValue: 'POULTY_RABBIT', displayName: 'Страви з сільсько-господарської птиці, пернатої дичі та кролика'},
+                                        {enumValue: 'POULTY_RABBIT', displayName: 'Страви з птиці, дичини та кролика'},
                                         {enumValue: 'SAUCES', displayName: 'Соуси'},
                                         {enumValue: 'SOUPS', displayName: 'Супи'},
                                         {enumValue: 'FISH_SEAFOOD', displayName: 'Страви з риби морепродуктів і раків'},
@@ -18,10 +18,12 @@ var types = [ {enumValue: 'COLD', displayName: 'Холодні закуски'},
                                         {enumValue: 'FLOUR', displayName: 'Борошняні вироби'},
                                         {enumValue: 'EGG', displayName: 'Страви з яєць'},
                                         {enumValue: 'BEVERAGES', displayName: 'Напої'} ];
+var clickedIndex = 0;
 
-
-calculationApp.controllers.controller('loadCategories', function ($scope, $log, oauth2Provider, HTTP_ERRORS)
+calculationApp.controllers.controller('showRecipesCtrl', function ($scope, $log, oauth2Provider, HTTP_ERRORS)
 {
+
+    $scope.recipeCategory = types[clickedIndex];
     /*$scope.recipes = [];
     $scope.getRecipesByType = function(type){
          $scope.enumType = $scope.convertType(type);
@@ -79,8 +81,11 @@ calculationApp.controllers.controller('loadCategories', function ($scope, $log, 
     $scope.allTypes = types;
     $scope.contents = [];
     for(var i = 0; i < types.length; i++){
-        $scope.contents.push({"picture" : "/img/"+i+".jpeg", "name" : $scope.allTypes[i].displayName, "id": i});
+        $scope.contents.push({"picture" : "/img/"+i+".jpeg", "name" : $scope.allTypes[i], "id": i});
     };
-
+    $scope.saveIndex = function (index)
+    {
+        clickedIndex = index;
+    }
 });
 
